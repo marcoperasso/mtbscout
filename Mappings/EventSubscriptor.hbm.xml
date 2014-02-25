@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+						 assembly="App_Code"
+						 namespace="MTBScout.Entities">
+
+  <class name="EventSubscriptor" table="EventSubscriptors" lazy="false">
+    <id name="Id" unsaved-value="0" type="System.Int32" >
+      <generator class="native" />
+    </id>
+    <property name="UserId" column="UserId" type="System.Int32" />
+    <property name="EventId" column="EventId" type="System.Int32" />
+    <property name="Name" column="Name" type="System.String" />
+    <property name="Surname" column="Surname" type="System.String"  />
+    <property name="EMail" column="EMail" type="System.String" not-null="true"/>
+    <property name="BirthDate" column="BirthDate" type="System.DateTime" />
+    <property name="GenderNumber" column="Gender" type="System.Int16" />
+    <property name="Club" column="Club" type="System.String" />
+  </class>
+</hibernate-mapping>

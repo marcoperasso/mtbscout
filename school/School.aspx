@@ -18,12 +18,13 @@
             Scuola di Mountain Bike Val Pentemina</h1>
         <h4 style="text-align: center">
             Partita IVA 02118870993</h4>
-        <h3 style="background-color: Yellow; color: Red; text-align: center; font-weight: bold;
+        <h3 style="color: Red; text-align: center; font-weight: bold;
             font-style: oblique;">
-            La scuola riapre l&#39;8 giugno, sono aperte le iscrizioni</h3>
-        <p style="background-color: Yellow; color: Red; text-align: center; font-weight: bold;
+            La scuola riapre il 3 maggio 2014, sono aperte le iscrizioni</h3>
+           
+        <p style="color: Red; text-align: center; font-weight: bold;
             font-style: oblique;">
-            <a href="mailto:info@mtbscout.it">Scrivici una mail</a> o contatta Marco al 338.3681001</p>
+           Vuoi iscriverti o chiedere qualcosa?  <a href="mailto:info@mtbscout.it">Scrivici una mail</a> o contatta Marco al 338.3681001</p>
         <br />
         <p>
             La scuola è rivolta principalmente ai bambini e ragazzi dai 7 ai 12 anni ed ha l&#39;obiettivo
@@ -44,22 +45,18 @@
         <h3>
             Lezioni per i bambini</h3>
         <p>
-            Le lezioni si svolgono ogni <i><b>sabato pomeriggio</b></i> e hanno durata di un&#39;ora,
+            Le lezioni si svolgono ogni <i><b>mercoledì e/o sabato pomeriggio</b></i> e hanno durata di un&#39;ora,
             nella fascia oraria 17.00 - 19.00; i bambini vengono suddivisi su due turni in base
-            al numero di iscritti, alla loro età e alle abilità sviluppate.</p>
-        <p>
-            Costi:</p>
+            a esigenze logistiche dei partecipanti, numero di iscritti, età e abilità sviluppate.</p>
+        <p>E' possibile iscriversi mensilmente (mese solare) oppure per l'intera stagione (dal 3/5/2014 al 29/10/2014). Ecco i costi:</p>
         <ul>
-            <li>100 euro per l'intera stagione, dall&#39;8 giugno al 15 settembre (le ultime due
-                settimane di settembre le utilizzeremo per i recuperi di eventuali lezioni perse
-                a causa del maltempo). </li>
-            <li>in caso di assenze pianificate, per un significativo numero di settimane, da parte
-                dei singoli partecipanti (vacanze, villeggiatura, ecc.) è possibile concordare un
-                costo ridotto: per la corretta organizzazione delle lezioni e dei tesseramenti è
-                in ogni caso preferibile comunicare l'iscrizione ad inizio corso (giugno)
-                <li>prima lezione di prova: gratuita.</li>
+            <li>mensile una volta a settimana: 30 euro</li>
+			<li>mensile due volte a settimana: 50 euro</li>
+			<li>stagionale una volta a settimana: 150 euro</li>
+			<li>stagionale due volte a settimana: 250 euro</li>
+            <li>prima lezione di prova: gratuita.</li>
         </ul>
-        <p>
+		<p>
             A questo va aggiunto il costo del tesseramento annuo alla Federazione Ciclistica
             Italiana (comprensivo di assicurazione) in base al <a target="fci" href="http://www.federciclismo.it/affiliazione/tesseramento.asp?cod=5">
                 tariffario in vigore</a>; il tesseramento verrà effettuato presso la <a href="http://www.genoabike.com/"

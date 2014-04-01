@@ -35,6 +35,15 @@
             <table class="Event">
             <tr>
                     <td class="DateColumn">
+                        <a href="Enduro2014/Enduro2014.aspx">Domenica 18 maggio 2014</a>
+                    </td>
+                    <td class="EventColumn">
+                        MTB Enduro dei Fieschi
+                    </td>
+                </tr> 
+             <tr>
+            <tr>
+                    <td class="DateColumn">
                         <a href="TouristTrophyTorriglia/TouristTrophyTorriglia.aspx">Domenica 16 giugno 2013</a>
                     </td>
                     <td class="EventColumn">

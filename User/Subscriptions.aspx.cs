@@ -9,7 +9,7 @@ using System.Globalization;
 
 public partial class User_Subscriptions : System.Web.UI.Page
 {
-    EventSubscriptor[] subscriptors;
+
     public const int TorrigliaId = 2;
 
     protected override void OnInit(EventArgs e)
@@ -20,7 +20,7 @@ public partial class User_Subscriptions : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
-      
+
         if (!Page.IsPostBack)
         {
             //CommandField bf = new CommandField();
@@ -83,13 +83,13 @@ public partial class User_Subscriptions : System.Web.UI.Page
     {
         return DateTime.TryParse(dateString, CultureInfo.CurrentCulture, DateTimeStyles.None, out date);
     }
+  
     protected void ButtonSave_Click(object sender, EventArgs e)
     {
-        Captcha1.ValidateCaptcha(Check.Text.Trim());
-        if (!Captcha1.UserValidated)
+        if (!captcha.IsValid(Check.Text))
         {
             Page.ClientScript.RegisterStartupScript(GetType(), "InvalidCaptcha", "alert('Il codice di verifica che hai inserito non è valido.');", true);
-        
+            captcha.SetCaptcha();
             return;
         }
 
@@ -114,13 +114,15 @@ public partial class User_Subscriptions : System.Web.UI.Page
         sbscr.GenderNumber = (short)RadioButtonListGender.SelectedIndex;
         DBHelper.SaveSubscriptor(sbscr);
         Helper.SendMail(sbscr.EMail, null, "info@mtbscout.it", "Conferma preiscrizione MTB Enduro dei Fieschi 2014", "Ti confermiamo l'avvenuta iscrizione, grazie per esserti registrato al MTB Enduro dei Fieschi 2014. Buon divertimento!", false);
-                
+
         //LoadSubscriptors();
 
-        RefreshCurrentSubscriptor();
+        
 
         Page.ClientScript.RegisterStartupScript(GetType(), "MessageOK", "alert('Informazioni salvate correttamente. Grazie per esserti registrato.');", true);
         ViewState.Clear();
+
+        RefreshCurrentSubscriptor();
     }
 
     private void RefreshCurrentSubscriptor()
@@ -132,28 +134,7 @@ public partial class User_Subscriptions : System.Web.UI.Page
         TextBoxSurname.Text = "";
         TextBoxMail.Text = "";
         RadioButtonListGender.SelectedIndex = 0;
+        captcha.SetCaptcha();
     }
-    protected void GridViewSubscriptions_RowEditing(object sender, GridViewEditEventArgs e)
-    {
-        if (e.NewEditIndex == -1 || e.NewEditIndex > subscriptors.Length - 1)
-            return;
-        EventSubscriptor sbscr = subscriptors[e.NewEditIndex];
-
-        TextBoxBirthDate.Text = sbscr.BirthDate.ToString();
-        SubscriptionId.Value = sbscr.Id.ToString();
-        TextBoxName.Text = sbscr.Name;
-        TextBoxSurname.Text = sbscr.Surname;
-        TextBoxMail.Text = sbscr.EMail;
-        RadioButtonListGender.SelectedIndex = sbscr.GenderNumber;
-    }
-    protected void GridViewSubscriptions_RowDeleting(object sender, GridViewDeleteEventArgs e)
-    {
-        if (e.RowIndex == -1 || e.RowIndex > subscriptors.Length - 1)
-            return;
-        EventSubscriptor sbscr = subscriptors[e.RowIndex];
-        DBHelper.DeleteSubscriptor(sbscr);
-
-        //LoadSubscriptors();
-        RefreshCurrentSubscriptor();
-    }
+   
 }

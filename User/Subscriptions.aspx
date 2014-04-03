@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
     CodeFile="Subscriptions.aspx.cs" Inherits="User_Subscriptions" %>
-
-<%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc1" %>
+<%@ Register TagName="Captcha" TagPrefix="Controls" Src="~/Control/Captcha.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>Preiscrizione MTB Enduro dei Fieschi 2014</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css"
@@ -103,15 +102,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <div>
-                                Scrivi questo codice di verifica per dimostrare che non sei un robot (scusaci per la mancanza di rispetto)
-                            </div><cc1:CaptchaControl ID="Captcha1" runat="server" CaptchaBackgroundNoise="Low" CaptchaLength="5"
-                                CaptchaHeight="60" CaptchaWidth="200" CaptchaLineNoise="None" CaptchaMinTimeout="5"
-                                CaptchaMaxTimeout="240" FontColor="#529E00" Style="display: inline" />
+                                Scrivi questo codice di verifica: <Controls:Captcha ID="captcha" runat="server"  />
                             
                         </td>
                         <td>
-                            
+                       
                             <asp:TextBox runat="server" Width="330px" ID="Check" Style="display: inline"></asp:TextBox>
                         </td>
                         <td>
@@ -121,7 +116,7 @@
                     </tr>
                 </tbody>
             </table>
-            <asp:Button ID="ButtonSave" runat="server" Text="Salva iscrizione" OnClick="ButtonSave_Click" />
+            <asp:Button ID="ButtonSave" runat="server" Text="Invia iscrizione" OnClick="ButtonSave_Click" />
         </fieldset>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>

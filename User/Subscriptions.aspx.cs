@@ -20,8 +20,7 @@ public partial class User_Subscriptions : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Check.Text.Length > 0)
-            throw new ApplicationException("FuckYou!");
+      
         if (!Page.IsPostBack)
         {
             //CommandField bf = new CommandField();
@@ -86,6 +85,14 @@ public partial class User_Subscriptions : System.Web.UI.Page
     }
     protected void ButtonSave_Click(object sender, EventArgs e)
     {
+        Captcha1.ValidateCaptcha(Check.Text.Trim());
+        if (!Captcha1.UserValidated)
+        {
+            Page.ClientScript.RegisterStartupScript(GetType(), "InvalidCaptcha", "alert('Il codice di verifica che hai inserito non è valido.');", true);
+        
+            return;
+        }
+
         DateTime dt;
         if (!ParseDate(TextBoxBirthDate.Text, out dt))
             return;
@@ -106,7 +113,7 @@ public partial class User_Subscriptions : System.Web.UI.Page
         sbscr.Club = TextBoxGroup.Text;
         sbscr.GenderNumber = (short)RadioButtonListGender.SelectedIndex;
         DBHelper.SaveSubscriptor(sbscr);
-        Helper.SendMail(sbscr.EMail, null, "info@mtbscout.it", "Conferma preiscrizione Tourist Trophy Torriglia", "Ti confermiamo l'avvenuta iscrizione, grazie per esserti registrato al Tourist Trophy Torriglia. Buon divertimento!", false);
+        Helper.SendMail(sbscr.EMail, null, "info@mtbscout.it", "Conferma preiscrizione MTB Enduro dei Fieschi 2014", "Ti confermiamo l'avvenuta iscrizione, grazie per esserti registrato al MTB Enduro dei Fieschi 2014. Buon divertimento!", false);
                 
         //LoadSubscriptors();
 

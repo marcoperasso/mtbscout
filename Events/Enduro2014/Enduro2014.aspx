@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="Enduro2014.aspx.cs" Inherits="Events_TouristTrophyTorriglia_TouristTrophyTorriglia" %>
+    CodeFile="Enduro2014.aspx.cs" Inherits="Events_Enduro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>MTB Enduro dei Fieschi</title>
@@ -48,6 +48,11 @@
         <h2>
             Costo iscrizione: 5 euro - Casco obbligatorio - Non occorre essere tesserati</h2>
         <iframe src="map.html" style="width: 800px; height: 400px;"></iframe>
+
+        <h2 class="centered">
+            <a title="Preiscrizioni" href="/user/subscriptions.aspx" >
+                Preiscriviti!</a></h2>
+
         <p class="centered">
             <a title="Visualizza mappa in una pagina più grande" href="map.html" target="_blank">
                 Visualizza mappa in una pagina più grande</a></p>

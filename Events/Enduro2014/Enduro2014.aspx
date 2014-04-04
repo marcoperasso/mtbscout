@@ -45,6 +45,8 @@
             della Banca, dove inizia l&#39;interminabile single track che riporterà a località
             Castello. Chi desidera produrre dell&#39;ottimo burro metta del latte cremoso nella
             propria borraccia prima di intraprendere la discesa, il risultato è garantito.</p>
+            <p>E' gradita la <a title="Preiscrizioni" href="/user/subscriptions.aspx" >
+                preiscrizione</a>.</p>
         <h2>
             Costo iscrizione: 5 euro - Casco obbligatorio - Non occorre essere tesserati</h2>
         <iframe src="map.html" style="width: 800px; height: 400px;"></iframe>

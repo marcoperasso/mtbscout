@@ -89,6 +89,7 @@ public partial class User_Subscriptions : System.Web.UI.Page
         if (!captcha.IsValid(Check.Text))
         {
             Page.ClientScript.RegisterStartupScript(GetType(), "InvalidCaptcha", "alert('Il codice di verifica che hai inserito non è valido.');", true);
+            Check.Text = "";
             captcha.SetCaptcha();
             return;
         }
@@ -113,7 +114,10 @@ public partial class User_Subscriptions : System.Web.UI.Page
         sbscr.Club = TextBoxGroup.Text;
         sbscr.GenderNumber = (short)RadioButtonListGender.SelectedIndex;
         DBHelper.SaveSubscriptor(sbscr);
-        Helper.SendMail(sbscr.EMail, null, "info@mtbscout.it", "Conferma preiscrizione MTB Enduro dei Fieschi 2014", "Ti confermiamo l'avvenuta iscrizione, grazie per esserti registrato al MTB Enduro dei Fieschi 2014. Buon divertimento!", false);
+        Helper.SendMail(sbscr.EMail, null, "info@mtbscout.it", "Conferma iscrizione MTB Enduro dei Fieschi 2014", 
+            "Ciao " + TextBoxName.Text + 
+            ", ti confermiamo l'avvenuta iscrizione, grazie per esserti registrato all'evento <b>MTB Enduro dei Fieschi 2014</b>. Buon divertimento!",
+            true);
 
         //LoadSubscriptors();
 
@@ -132,7 +136,9 @@ public partial class User_Subscriptions : System.Web.UI.Page
         SubscriptionId.Value = "";
         TextBoxName.Text = "";
         TextBoxSurname.Text = "";
+        TextBoxGroup.Text = "";
         TextBoxMail.Text = "";
+        Check.Text = "";
         RadioButtonListGender.SelectedIndex = 0;
         captcha.SetCaptcha();
     }

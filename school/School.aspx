@@ -59,8 +59,8 @@
 		<p>
             A questo va aggiunto il costo del tesseramento annuo alla Federazione Ciclistica
             Italiana (comprensivo di assicurazione) in base al <a target="fci" href="http://www.federciclismo.it/affiliazione/tesseramento.asp?cod=5">
-                tariffario in vigore</a>; il tesseramento verrà effettuato presso la <a href="http://www.genoabike.com/"
-                    target="gbike">A.S.D. Genoa Bike</a>, affiliata alla F.C.I. - <a href="http://www.federciclismo.it/affiliazione/societa2013/dettagliosoc.asp?mcodice=06C1178"
+                tariffario in vigore</a>; il tesseramento verrà effettuato presso la <a href="http://www.uspontedecimo.net/"
+                    target="pontedecimo">U.S. Pontedecimo Ciclismo</a>, affiliata alla F.C.I. - <a href="http://www.federciclismo.it/affiliazione/societa2014/dettagliosoc.asp?mcodice=06T0916"
                         target="_blank">visualizza lista degli attuali tesserati.</a></p>
         <p>
             Ogni bambino deve essere munito di una fototessera, certificato medico (per attività

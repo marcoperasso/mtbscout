@@ -21,9 +21,13 @@
     </ContentTemplate>
 </asp:UpdatePanel>
 <script type="text/javascript">
-    jQuery(function () {
-        jQuery('.ImagesContainer').jGallery({
+    function pageLoad(sender, args) {
+        gallery();
+    }
+
+    function gallery() {
+        $('.ImagesContainer').jGallery({
             'mode': 'standard'
         });
-    });
-    </script>
+    }
+</script>

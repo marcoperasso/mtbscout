@@ -8,10 +8,10 @@
     <title runat="server"></title>
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/Script/jquery-2.0.3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 
-    <link href="/StyleSheet.css" type="text/css" rel="stylesheet"/>
+    <link href="/css/StyleSheet.css" type="text/css" rel="stylesheet"/>
 </head>
 <body style="margin: 0px;">
     <form id="form1" runat="server" target="_self">

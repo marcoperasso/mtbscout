@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title runat="server">Percorsi</title>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <link href="/StyleSheet.css" type="text/css" rel="stylesheet" />
+    <link href="/css/StyleSheet.css" type="text/css" rel="stylesheet" />
 </head>
 <body style="margin: 0px;">
     <div style="margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">

@@ -46,9 +46,9 @@ public partial class ImageIterator : System.Web.UI.UserControl
         PageCounterDown.DrawPages();
 
         ImagesTitle.InnerText = Title;
-        ImagesTable.Style[HtmlTextWriterStyle.MarginLeft] = "auto";
-        ImagesTable.Style[HtmlTextWriterStyle.MarginRight] = "auto";
-        ImagesTable.Width = Unit.Percentage(95);
+        ImagesContainer.Style[HtmlTextWriterStyle.MarginLeft] = "auto";
+        ImagesContainer.Style[HtmlTextWriterStyle.MarginRight] = "auto";
+        ImagesContainer.Width = Unit.Percentage(95);
 
 		if (!Page.IsPostBack)
 			DrawTable();
@@ -78,79 +78,24 @@ public partial class ImageIterator : System.Web.UI.UserControl
 
 		Previous.Visible = start != 0;
 		Next.Visible = end != cache.files.Length;
-
-		int col = 0;
-
-		TableRow row = null;
+        Panel p = new Panel();
+        p.CssClass = "album";
+			ImagesContainer.Controls.Add(p);
 		for (prog = start; prog < end; prog++)
 		{
 			string file = cache.files[prog];
 
-			if (col == 0)
-			{
-				row = new TableRow();
-				ImagesTable.Rows.Add(row);
-			}
-
-			TableCell cell = new TableCell();
-			row.Cells.Add(cell);
-			cell.CssClass = "ImageCell";
-			cell.Width = Unit.Percentage(33.33333);
 			string caption = cache.captions[prog];
 
 			HyperLink a = new HyperLink();
-			Panel p = new Panel();
-			System.Drawing.Size sz = cache.sizes[prog];
-			p.Width = Unit.Pixel(sz.Width);
-			p.Height = Unit.Pixel(sz.Height);
-			p.Style[HtmlTextWriterStyle.MarginTop] = "20px";
-			p.Style[HtmlTextWriterStyle.MarginBottom] = "10px";
-			cell.Controls.Add(p);
+            a.NavigateUrl = cache.reducedUrls[prog];
+            Image img = new Image();
+            img.ImageUrl = cache.thumbUrls[prog];
+            img.AlternateText = caption;
+            a.Controls.Add(img);
 
-			Image downLoadImg = new Image();
-			downLoadImg.ImageUrl = "~/Images/download.png";
-			downLoadImg.AlternateText = "Clicca per scaricare la versione originale";
-			downLoadImg.Attributes["title"] = "Clicca per scaricare la versione originale";
-			downLoadImg.Style[HtmlTextWriterStyle.BackgroundColor] = "transparent";
-			downLoadImg.Height = Unit.Pixel(30);
-			downLoadImg.Width = Unit.Pixel(30);
-			downLoadImg.Style[HtmlTextWriterStyle.Position] = "absolute";
-			downLoadImg.Style[HtmlTextWriterStyle.Left] = "0px";
-			downLoadImg.Style[HtmlTextWriterStyle.Top] = "0px";
-			downLoadImg.Style[HtmlTextWriterStyle.Display] = "inline";
-			downLoadImg.Style[HtmlTextWriterStyle.Cursor] = "pointer";
-
-			downLoadImg.Attributes["onmouseout"] = "normalDownloadImage(this);";
-			downLoadImg.Attributes["onmouseover"] = "hoverDownloadImage(this);";
-			string originalPhotoUrl = PathFunctions.GetFullPath(Request, cache.fileUrls[prog]);
-			downLoadImg.Attributes["onclick"] = string.Format("window.open('{0}')", originalPhotoUrl);
-
-			a.NavigateUrl = cache.reducedUrls[prog];
-			a.Attributes["rel"] = "lightbox[roadtrip]";
-			a.Attributes["title"] = caption;
 			p.Controls.Add(a);
 
-
-			Image img = new Image();
-			a.Controls.Add(img);
-			p.Controls.Add(downLoadImg);
-			img.ImageUrl = cache.thumbUrls[prog];
-            img.AlternateText = caption;
-			img.Attributes["title"] = "Clicca per ingrandire";
-			img.Attributes["imageDescription"] = System.IO.Path.GetFileNameWithoutExtension(file);
-            img.Attributes["onmouseout"] = "normalImage(this);";
-            img.Attributes["onmouseover"] = "hoverImage(this);";
-            img.CssClass = "IteratorImage";
-            img.BorderWidth = Unit.Pixel(2);
-
-			Label l = new Label();
-			l.Style[HtmlTextWriterStyle.Display] = "block";
-			l.Text = caption;
-
-			cell.Controls.Add(l);
-			
-			if (++col == 3)
-				col = 0;
 		}
 		ImagesPanel.Update();
 

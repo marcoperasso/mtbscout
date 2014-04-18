@@ -140,7 +140,7 @@
         <asp:TextBox Width="0" Height="0" runat="server" ID="Check"></asp:TextBox>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="Script/jquery-2.0.3.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 

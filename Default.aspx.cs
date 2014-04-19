@@ -74,8 +74,10 @@ function initRouteTitle() {{document.getElementById(""RouteTitle"").innerHTML = 
 	private string GetRandomImageUrl (out string title, out string pageUrl)
 	{
 		Random r = new Random(DateTime.Now.Second);
-		while (true)
+        int i = 10;
+		while (i > 0)
 		{
+            i--;
 			int routeIdx = r.Next(DBHelper.Routes.Count());
 			Route route = DBHelper.Routes.ElementAt(routeIdx);
 			ImageCache cache = Helper.GetImageCache(PathFunctions.GetImagePathFromRouteName(route.Name));
@@ -89,5 +91,8 @@ function initRouteTitle() {{document.getElementById(""RouteTitle"").innerHTML = 
 			pageUrl = route.GetRouteUrl(false);
 			return cache.thumbUrls[imageIdx];
 		}
+        title = "";
+        pageUrl = "";
+        return "";
 	}
 }

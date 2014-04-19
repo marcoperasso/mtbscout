@@ -8,6 +8,7 @@ using MTBScout.Entities;
 using System.Globalization;
 using NHibernate;
 using System.Web.Security;
+using MTBScout;
 
 public partial class User_User : System.Web.UI.Page
 {
@@ -54,6 +55,12 @@ public partial class User_User : System.Web.UI.Page
         if (user == null) //non ho trovato un utente da db, alora è di nuova creazione?
             user = LoginState.NewUser;
         return user;
+    }
+    protected void ButtonNewRoute_Click(object sender, EventArgs e)
+    {
+        Guid guid = Guid.NewGuid();
+        string url = PathFunctions.GetUrlFromPath(PathFunctions.EditRoutePage, false).Replace("'", "\\'") + "?Route=" + guid.ToString();
+        Response.Redirect(url);
     }
     protected void ButtonSave_Click(object sender, EventArgs e)
     {

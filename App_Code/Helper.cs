@@ -45,7 +45,7 @@ public static class Helper
         DifficultyMap["MC"] = "(per cicloescursionisti di media capacità tecnica) percorso su sterrate con fondo poco sconnesso o poco irregolare (tratturi, carrarecce…) o su sentieri con fondo compatto e scorrevole";
         DifficultyMap["BC"] = "(per cicloescursionisti di buone capacità tecniche) percorso su sterrate molto sconnesse o su mulattiere e sentieri dal fondo piuttosto sconnesso ma abbastanza scorrevole oppure compatto ma irregolare, con qualche ostacolo naturale (per es. gradini di roccia o radici)";
         DifficultyMap["OC"] = "(per cicloescursionisti di ottime capacità tecniche) percorso su mulattiere o sentieri dal fondo molto sconnesso e/o molto irregolare, con presenza significativa di ostacoli";
-        DifficultyMap["EC"] = "(massimo livello per il cicloescursionista... estremo! ma possibilmente da evitare in gite sociali) percorso su sentieri molto irregolari, caratterizzati da gradoni e ostacoli in continua successione, che richiedono tecniche di tipo trialistico";
+        DifficultyMap["EC"] = "(massimo livello per il cicloescursionista... estremo! possibilmente da evitare in gite sociali) percorso su sentieri molto irregolari, caratterizzati da gradoni e ostacoli in continua successione, che richiedono tecniche di tipo trialistico";
 
         DifficultyMapColor["TC"] = Color.Yellow;
         DifficultyMapColor["MC"] = Color.PaleGreen;
@@ -412,7 +412,6 @@ public static class Helper
         }
         catch (Exception e)
         {
-            Log.Add(e.ToString());
             return "";
         }
     }

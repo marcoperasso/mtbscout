@@ -27,6 +27,8 @@ public partial class Routes_UploadFile : System.Web.UI.Page
 				string filePath = Path.Combine(temporaryFolder, 
 					string.Format("{0}-{1}.jpg", (list.Count + 1).ToString("000"), routeName));
 				UploadedImage ui = new UploadedImage(filePath, file.InputStream);
+                if (string.IsNullOrEmpty(ui.Description))
+                    ui.Description = Path.GetFileNameWithoutExtension(file.FileName);
 				list.Add(ui);
 			}
 			catch

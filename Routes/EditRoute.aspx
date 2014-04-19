@@ -10,13 +10,11 @@
             padding: 20px;
         }
         
-    	li
-		{
-			text-align: justify;
-		}
-        
+        li
+        {
+            text-align: justify;
+        }
     </style>
-
     <script type="text/javascript">
         function frameLoaded(frame) {
             var mapDiv = frame.contentDocument.getElementById("gmap_div");
@@ -32,42 +30,38 @@
         function confirmDelete() {
             return confirm("Sei sicuro di cancellare questo percorso? Tutti i dati associati andranno persi, l'operazione è irreversibile. Vuoi proseguire?");
         }
-		
+        setInterval(ping, 300000);
+        function ping() {
+            $(".buttondummy").click();
+        }
     </script>
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPanel" runat="Server">
     <div id="ContentPanel" class="ContentPanel" style="text-align: left">
         <h1>
             Inserisci o modifica i dati del tuo percorso</h1>
-            <p>Ecco alcune linee guida per inserire il tuo percorso:</p>
-		<ul>
-			<li>Carica il tracciato GPS del percorso; deve trattarsi di un file GPX, se il 
-				formato del tuo file non corrisponde esistono in rete molti strumenti di 
-				conversione.</li>
-				<li>Scegli un titolo per il percorso: per omogeneità è preferibile utilizzare la sequenza di località toccate dal percorso stesso (es. Montoggio - 
-					Casella - Val Brevenna - Carsi - Carsegli - Montoggio).</li>
-			<li>Fornisci una descrizione di dettaglio: caratteristiche del fondo, tecnicità, 
-				punti panoramici, punti di attenzione, punti di rifornimento idrico, in generale 
-				ogni informazioni che reputi possa tornare utile a chi desideri affrontare il 
-				percorso.</li>
-			<li>Indica una percentuale di ciclabilità da zero a cento (ovviamente indicativa, 
-				spesso la ciclabilità di un percorso è funzione di fattori variabili come le 
-				condizioni meteorologiche, le abilità tecniche del biker, le condizioni di 
-				allenamento, ecc..).</li>
-			<li>Scegli un livello di difficoltà fra quelli disponibili (suddiviso fra salita e 
-				discesa). Tenuto conto che anche in questo caso il fattore soggettivo è 
-				imprescindibile, si è scelto di adottare la scala di difficoltà proposta dal CAI 
-				(segui il link proposto per ulteriori informazioni).</li>
-			<li>Carica le foto del tuo percorso (opzionale ma consigliato). Se le tue foto sono 
-				geolocalizzate (ossia contengono le informazioni di latitudine e longitudine 
-				della posizione in cui sono state scattate: molte fotocamere moderne hanno un 
-				sensore GPS integrato che permette di avere questa informazione), verranno 
-				conseguentemente posizionate sulla mappa lungo il tracciato del percorso; in 
-				alternativa, puoi sincronizzare data e ora della tua fotocamera con data e ora 
-				del tuo GPS, il motore del sito provvederà, riconciliando queste informazioni, 
-				ad inserire le informazioni di geolocalizzazione nelle tue foto.</li>
-			</ul>
+        <p>
+            Ecco alcune linee guida per inserire il tuo percorso:</p>
+        <ul>
+            <li>Carica il tracciato GPS del percorso; deve trattarsi di un file GPX, se il formato
+                del tuo file non corrisponde esistono in rete molti strumenti di conversione.</li>
+            <li>Scegli un titolo per il percorso: per omogeneità è preferibile utilizzare la sequenza
+                di località toccate dal percorso stesso (es. Montoggio - Casella - Val Brevenna
+                - Carsi - Carsegli - Montoggio).</li>
+            <li>Fornisci una descrizione di dettaglio: caratteristiche del fondo, tecnicità, punti
+                panoramici, punti di attenzione, punti di rifornimento idrico, in generale ogni
+                informazioni che reputi possa tornare utile a chi desideri affrontare il percorso.</li>
+            <li>Indica una percentuale di ciclabilità da zero a cento (ovviamente indicativa, spesso
+                la ciclabilità di un percorso è funzione di fattori variabili come le condizioni
+                meteorologiche, le abilità tecniche del biker, le condizioni di allenamento, ecc..).</li>
+            <li>Scegli un livello di difficoltà fra quelli disponibili (suddiviso fra salita e discesa).
+                Tenuto conto che anche in questo caso il fattore soggettivo è imprescindibile, si
+                è scelto di adottare la scala di difficoltà proposta dal CAI.</li>
+            <li>Carica le foto del tuo percorso (opzionale ma consigliato). Puoi sincronizzare
+                data e ora della tua fotocamera con data e ora del tuo GPS; il motore del sito provvederà,
+                riconciliando queste informazioni, ad inserire le informazioni di geolocalizzazione
+                nelle tue foto, così le troverai posizionate sulla traccia nel punto esatto in cui sono state scattate.</li>
+        </ul>
         <asp:UpdatePanel ID="UpdatePanelOuter" runat="server" ChildrenAsTriggers="true" UpdateMode="Conditional">
             <ContentTemplate>
                 <fieldset title="Informazioni di base">
@@ -123,32 +117,37 @@
                             <legend>Difficoltà tecnica</legend>
                             <div class="comboLevel">
                                 Salita:
-                                <asp:DropDownList ID="DropDownListClimb" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownListClimb_SelectedIndexChanged">
-                                    <asp:ListItem>Seleziona una difficoltà</asp:ListItem>
-                                    <asp:ListItem>TC</asp:ListItem>
-                                    <asp:ListItem>MC</asp:ListItem>
-                                    <asp:ListItem>BC</asp:ListItem>
-                                    <asp:ListItem>OC</asp:ListItem>
-                                    <asp:ListItem>EC</asp:ListItem>
-                                </asp:DropDownList>
+                                <asp:Panel runat="server" ID="ClimbPanel">
+                                    <asp:RadioButton ID="TC_Climb" AutoPostBack="true" GroupName="Climb" runat="server"
+                                        Checked="true" OnCheckedChanged="Radio_SelectedChanged" /><br />
+                                    <asp:RadioButton ID="MC_Climb" AutoPostBack="true" GroupName="Climb" runat="server"
+                                        OnCheckedChanged="Radio_SelectedChanged" /><br />
+                                    <asp:RadioButton ID="BC_Climb" AutoPostBack="true" GroupName="Climb" runat="server"
+                                        OnCheckedChanged="Radio_SelectedChanged" /><br />
+                                    <asp:RadioButton ID="OC_Climb" AutoPostBack="true" GroupName="Climb" runat="server"
+                                        OnCheckedChanged="Radio_SelectedChanged" /><br />
+                                    <asp:RadioButton ID="EC_Climb" AutoPostBack="true" GroupName="Climb" runat="server"
+                                        OnCheckedChanged="Radio_SelectedChanged" /><br />
+                                </asp:Panel>
                                 <asp:CheckBox ID="CheckBoxClimb" runat="server" Text="Significativi tratti con forti pendenze"
                                     AutoPostBack="true" OnCheckedChanged="CheckBoxClimb_CheckedChanged" />
-                                <asp:Label Style="display: block;" ID="LabelClimb" runat="server"></asp:Label>
                             </div>
                             <div class="comboLevel">
                                 Discesa:
-                                <asp:DropDownList ID="DropDownListDown" runat="server" OnSelectedIndexChanged="DropDownListDown_SelectedIndexChanged"
-                                    AutoPostBack="True">
-                                    <asp:ListItem>Seleziona una difficoltà</asp:ListItem>
-                                    <asp:ListItem>TC</asp:ListItem>
-                                    <asp:ListItem>MC</asp:ListItem>
-                                    <asp:ListItem>BC</asp:ListItem>
-                                    <asp:ListItem>OC</asp:ListItem>
-                                    <asp:ListItem>EC</asp:ListItem>
-                                </asp:DropDownList>
+                                <asp:Panel runat="server" ID="DownPanel">
+                                    <asp:RadioButton ID="TC_Down" AutoPostBack="true" GroupName="Down" runat="server"
+                                        OnCheckedChanged="Radio_SelectedChanged" Checked="true" /><br />
+                                    <asp:RadioButton ID="MC_Down" AutoPostBack="true" GroupName="Down" runat="server"
+                                        OnCheckedChanged="Radio_SelectedChanged" /><br />
+                                    <asp:RadioButton ID="BC_Down" AutoPostBack="true" GroupName="Down" runat="server"
+                                        OnCheckedChanged="Radio_SelectedChanged" /><br />
+                                    <asp:RadioButton ID="OC_Down" AutoPostBack="true" GroupName="Down" runat="server"
+                                        OnCheckedChanged="Radio_SelectedChanged" /><br />
+                                    <asp:RadioButton ID="EC_Down" AutoPostBack="true" GroupName="Down" runat="server"
+                                        OnCheckedChanged="Radio_SelectedChanged" /><br />
+                                </asp:Panel>
                                 <asp:CheckBox ID="CheckBoxDown" runat="server" Text="Significativi tratti con forti pendenze"
                                     AutoPostBack="true" OnCheckedChanged="CheckBoxDown_CheckedChanged" />
-                                <asp:Label Style="display: block;" ID="LabelDown" runat="server"></asp:Label>
                             </div>
                             <div>
                                 Difficoltà complessiva:
@@ -157,8 +156,6 @@
                                     SetFocusOnError="True"></asp:RequiredFieldValidator>
                                 <asp:TextBox ID="TextBoxDifficulty" runat="server" TextMode="SingleLine" CausesValidation="True"
                                     Enabled="false"></asp:TextBox>
-                                <a target="MTBCAI" href="http://www.mtbcai.it/scaladifficolta.asp" title="Per saperne di più...">
-                                    Per saperne di più...</a>
                             </div>
                         </fieldset>
                     </ContentTemplate>
@@ -174,13 +171,16 @@
                     <iframe id="UploadImageFrame" runat="server" frameborder="0" width="100%" scrolling="no"
                         height="100px;"></iframe>
                 </fieldset>
+                <fieldset title="Pubblicazione">
+                    <legend>Pubblicazione</legend>
+                    <div style="text-align:center;"><asp:CheckBox ID="CheckBoxPublished" runat="server" Text="Pubblicata" /></div>
+                </fieldset>
                 <div style="text-align: center">
-                    <asp:CheckBox ID="CheckBoxSendMail" runat="server" 
-                        Text="Manda la mail di notifica agli utenti registrati" />
-                        <br />
                     <asp:Button ID="ButtonSave" runat="server" Text="Salva" OnClick="ButtonSave_Click" />
-                <asp:Button ID="ButtonDelete" runat="server" Text="Elimina questo percorso" 
-                        CausesValidation="false" OnClientClick="return confirmDelete();" onclick="ButtonDelete_Click" /></div>
+                    <asp:Button ID="ButtonDelete" runat="server" Text="Elimina questo percorso" CausesValidation="false"
+                        OnClientClick="return confirmDelete();" OnClick="ButtonDelete_Click" /></div>
+                <asp:Button ID="ButtonDummy" runat="server" CausesValidation="false" Style="display: none"
+                    CssClass="buttondummy" OnClick="ButtonDummy_Click" />
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>

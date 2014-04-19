@@ -57,11 +57,33 @@ function getUpdateImagesButton(){{
             TextBoxDescription.Text = route.Description;
             TextBoxCiclyng.Text = route.Cycling.ToString();
             TextBoxDifficulty.Text = route.Difficulty;
+            CheckBoxPublished.Checked = !route.Draft;
             DifficultyFromString();
             mainImage = route.Image;
         }
 
+        SetDifficulties(ClimbPanel);
+        SetDifficulties(DownPanel);
+        DifficultyToString();
         BuildImageControls();
+    }
+
+    private void SetDifficulties(Panel p)
+    {
+        foreach (Control c in p.Controls)
+        {
+            RadioButton rb = c as RadioButton;
+            if (rb == null)
+                continue;
+            string s = GetDifficultyCode(rb);
+            rb.Text = Helper.DifficultyMap[s];
+            rb.BackColor = Helper.DifficultyMapColor[s];
+        }
+    }
+
+    private static string GetDifficultyCode(RadioButton rb)
+    {
+        return rb.ID.Substring(0, rb.ID.IndexOf("_"));
     }
 
     private void BuildImageControls()
@@ -311,10 +333,13 @@ function getUpdateImagesButton(){{
             Helper.ClearImageCache(imageFolder);
             //forzo la generazione dei thumbnails
             Helper.GetImageCache(imageFolder);
+
+            bool published = CheckBoxPublished.Checked;
+            route.Draft = !published;
             //salvo il record
             DBHelper.SaveRoute(route);
 
-            if (CheckBoxSendMail.Checked)
+            if (published)
             {
                 //mando una mail agli utenti registrati
                 string msg = string.Format("Ciao biker!<br/>L'utente {0} ha inserito o modificato il percorso<br/><a target=\"route\" href=\"{1}\">{2}</a><br/>Scarica il tracciato e vieni a provarlo!<br/><br/>MTB Scout",
@@ -338,36 +363,20 @@ function getUpdateImagesButton(){{
 
     protected void DropDownListDown_SelectedIndexChanged(object sender, EventArgs e)
     {
-        UpdateDownExplanation();
+        
         DifficultyToString();
     }
 
-    private void UpdateDownExplanation()
-    {
-        if (DropDownListDown.SelectedIndex >= 1)
-        {
-            LabelDown.Text = Helper.DifficultyMap[DropDownListDown.SelectedValue];
-            LabelDown.BackColor = Helper.DifficultyMapColor[DropDownListDown.SelectedValue];
-            LabelDown.ForeColor = Color.Black;
-        }
-    }
+    
 
 
-    protected void DropDownListClimb_SelectedIndexChanged(object sender, EventArgs e)
+    protected void Radio_SelectedChanged(object sender, EventArgs e)
     {
-        UpdateClimbExplanation();
+       
         DifficultyToString();
     }
 
-    private void UpdateClimbExplanation()
-    {
-        if (DropDownListClimb.SelectedIndex >= 1)
-        {
-            LabelClimb.Text = Helper.DifficultyMap[DropDownListClimb.SelectedValue];
-            LabelClimb.BackColor = Helper.DifficultyMapColor[DropDownListClimb.SelectedValue];
-            LabelClimb.ForeColor = Color.Black;
-        }
-    }
+    
 
 
     protected void CheckBoxClimb_CheckedChanged(object sender, EventArgs e)
@@ -378,20 +387,36 @@ function getUpdateImagesButton(){{
     {
         DifficultyToString();
     }
-
+    string GetSelectedCode(Panel p)
+    {
+        foreach (Control c in p.Controls)
+        {
+            RadioButton rb = c as RadioButton;
+            if (rb == null)
+                continue;
+            if (rb.Checked)
+                return GetDifficultyCode(rb); 
+        }
+        return "";
+    }
+    void SetSelectedCode(Panel p, string code)
+    {
+        foreach (Control c in p.Controls)
+        {
+            RadioButton rb = c as RadioButton;
+            if (rb == null)
+                continue;
+            rb.Checked = GetDifficultyCode(rb) == code;
+        }
+    }
     private void DifficultyToString()
     {
-        if (DropDownListDown.SelectedIndex < 1 || DropDownListClimb.SelectedIndex < 1)
-        {
-            TextBoxDifficulty.Text = "";
-            return;
-        }
-
+      
         TextBoxDifficulty.Text =
-             DropDownListClimb.SelectedValue +
+             GetSelectedCode(ClimbPanel) +
              (CheckBoxClimb.Checked ? "+" : "") +
              '/' +
-             DropDownListDown.SelectedValue +
+             GetSelectedCode(DownPanel) +
              (CheckBoxDown.Checked ? "+" : "");
     }
     private void DifficultyFromString()
@@ -402,12 +427,10 @@ function getUpdateImagesButton(){{
         bool bUp;
         Helper.GetDifficulty(TextBoxDifficulty.Text, out sDown, out sUp, out bDown, out bUp);
 
-        UpdateListValue(DropDownListClimb, sUp);
+        SetSelectedCode(ClimbPanel, sUp);
         CheckBoxClimb.Checked = bUp;
-        UpdateListValue(DropDownListDown, sDown);
+        SetSelectedCode(DownPanel, sDown);
         CheckBoxDown.Checked = bDown;
-        UpdateClimbExplanation();
-        UpdateDownExplanation();
     }
 
     private void UpdateListValue(DropDownList ddl, string val)
@@ -421,6 +444,10 @@ function getUpdateImagesButton(){{
             }
     }
 
+    protected void ButtonDummy_Click(object sender, EventArgs e)
+    {
+
+    }
 }
 class MyRadioButton : RadioButton
 {

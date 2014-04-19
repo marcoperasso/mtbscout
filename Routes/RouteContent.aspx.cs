@@ -42,6 +42,7 @@ public partial class Map : System.Web.UI.Page
         Response.Write("function addMarkers(){\r\n");
 		foreach (Route r in Routes)
         {
+           
 			string url = r.GetRouteUrl(editMode);
 
 			string gpxFile = PathFunctions.GetGpxPathFromRouteName(r.Name);
@@ -52,8 +53,8 @@ public partial class Map : System.Web.UI.Page
 
             //TrackPoint p = parser.Tracks[0].Segments[0].Points[0];
             GenericPoint p = parser.MediumPoint;
-            string color = "blue";
-            string title = r.Title.Replace("'", "\\'");
+            string color = r.Draft ? "red" : "blue";
+            string title = r.Title.Replace("'", "\\'") + (r.Draft ? " (bozza)" : "");
             string name = r.Name;
             string description = string.Format("<iframe scrolling=\"no\" frameborder=\"no\" src=\"/RouteData.aspx?name={0}\"/>", r.Name);
             string icon = "";
@@ -99,8 +100,8 @@ public partial class Map : System.Web.UI.Page
 				int ownerId;
 				string filter = Request.QueryString["UserId"];
 
-				routes =(string.IsNullOrEmpty(filter) || !int.TryParse(filter, out ownerId))
-					? DBHelper.Routes
+				routes = (string.IsNullOrEmpty(filter) || !int.TryParse(filter, out ownerId))
+					? from r in DBHelper.Routes where !r.Draft select r  
 					: DBHelper.GetRoutes(ownerId);
 			}
 			return routes;

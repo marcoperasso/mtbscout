@@ -116,6 +116,9 @@ namespace MTBScout.Entities
         private int ownerId;
         public int OwnerId { get { return ownerId; } set { ownerId = value; } }
 
+        private bool draft;
+        public bool Draft { get { return draft; } set { draft = value; } }
+
         public string GetRouteUrl(bool editMode)
         {
             string routeFolderPath = PathFunctions.GetRoutePathFromName(Name);

@@ -9,6 +9,11 @@ input[type='text']
 {
     width: 100%;
     }
+    .newroutebutton
+    {
+        float:left;position: relative;top: 40px;left: 80px;background-color:yellow; font-size:large;
+  border-radius: 15px;cursor:pointer;
+        }
 </style>
 	<script type="text/javascript">
 		function onCanSave() {
@@ -159,7 +164,7 @@ input[type='text']
 				<asp:Panel ID="MyRoutesPanel" runat="server">
 					<h2>
 						I miei percorsi</h2> 
-                        <asp:Button style="float:left;position: relative;top: 30px;left: 80px;" ID="Button1" runat="server" Text="Crea nuovo percorso..." 
+                        <asp:Button CssClass="newroutebutton"  ID="Button1" runat="server" Text="Crea nuovo percorso..." 
 						OnClick="ButtonNewRoute_Click"  />
                       
 					<iframe id="MyRoutes" runat="server" style="width: 100%; height: 600px;" scrolling="no"

@@ -57,7 +57,7 @@ public partial class Map : System.Web.UI.Page
             string title = r.Title.Replace("'", "\\'") + (r.Draft ? " (bozza)" : "");
             string name = r.Name;
             string description = string.Format("<iframe scrolling=\"no\" frameborder=\"no\" src=\"/RouteData.aspx?name={0}\"/>", r.Name);
-            string icon = r.Draft ? "draft_icon.png" : "";
+            string icon = r.Draft ? "/Images/draft_marker.png" : "";
             string imageFolder = PathFunctions.GetImagePathFromGpx(gpxFile);
             string imageFile = Path.Combine(imageFolder, string.IsNullOrEmpty (r.Image) ? "" : r.Image);
             if (!File.Exists(imageFile))

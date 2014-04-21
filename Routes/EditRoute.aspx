@@ -169,7 +169,7 @@
                         </ContentTemplate>
                     </asp:UpdatePanel>
                     <iframe id="UploadImageFrame" runat="server" frameborder="0" width="100%" scrolling="no"
-                        height="100px;"></iframe>
+                        ></iframe>
                 </fieldset>
                 <fieldset title="Pubblicazione">
                     <legend>Pubblicazione</legend>

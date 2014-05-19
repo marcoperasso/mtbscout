@@ -41,7 +41,7 @@ li
 }
 .widget
 {
-    background-image: url("Images/widget-bkgnd1.png");
+    background-image: url("/Images/widget-bkgnd1.png");
     width: 480px;
     height: 350px;
     display: inline-block;
@@ -214,13 +214,11 @@ div.Horiz
 
 div.NewsBanner
 {
-    visibility: hidden;
+	visibility: hidden;
     display: none;
     border: medium outset #FFFFFF;
     padding: 30px;
     background-color: #FFFFCC;
-    left: 20%;
-    width: 60%;
     background-color: #6699FF;
 }
 

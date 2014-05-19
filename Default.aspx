@@ -14,10 +14,10 @@
          <div id="NewsBanner" class="NewsBanner">
             <div style="position: absolute; width: 98%; left: 1%; top: 5px">
                 <img alt="Chiudi" title="Chiudi" onclick="closeBanner();" src="Images/Close.png"
-                    style="width: 20px; height: 20px; float: right;" />
+                    style="width: 20px; height: 20px; float: right; cursor:pointer" />
             </div>
-            <a href="Events/Enduro2014/Enduro2014.aspx">
-                <img id="BannerImage" border="0" alt="" src="Events/Enduro2014/locandina.png" style="width: 80%; height: 80%"/>
+            <a href="MTB ENDURO DEI FIESCHI SAVIGNONE.pdf">
+                <img id="BannerImage" border="0" alt="" src="savignone.png" style="width:90%;height:90%" />
             </a>
         </div><%----%>
         <uc1:Spot ID="Spot2" runat="server" />

@@ -1,14 +1,4 @@
 ﻿
-function Size(w, h) {
-	this.W = w;
-	this.H = h;
-}
-function setLocation(element, x, y) {
-	var style = element.style;
-	style.position = 'absolute';
-	style.left = x + "px";
-	style.top = y + "px";
-}
 
 function animateNewsBanner() {
 	var banner = document.getElementById('NewsBanner');
@@ -16,29 +6,14 @@ function animateNewsBanner() {
 		return;
 	banner.style.visibility = "visible";
 	banner.style.display = "block";
-	banner.style.position = "absolute";
+	banner.style.position = "fixed";
 
-	banner.style.zIndex = 100;
-
+	banner.style.zIndex = 10000;
+	this.bannerRatio = jQuery(banner).width() / jQuery(banner).height();
 	adjustBannerSize(10);
 }
 function getWindowSize() {
-	var myWidth = 0, myHeight = 0;
-	if (typeof (window.innerWidth) == 'number') {
-		//Non-IE
-		myWidth = window.innerWidth;
-		myHeight = window.innerHeight;
-	} else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
-		//IE 6+ in 'standards compliant mode'
-		myWidth = document.documentElement.clientWidth;
-		myHeight = document.documentElement.clientHeight;
-	} else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
-		//IE 4 compatible
-		myWidth = document.body.clientWidth;
-		myHeight = document.body.clientHeight;
-	}
-
-	return new Size(myWidth, myHeight);
+	return {"W": jQuery(this).width(), "H": jQuery(this).height()};
 }
 function adjustBannerSize(size) {
 	var banner = document.getElementById('NewsBanner');
@@ -47,10 +22,13 @@ function adjustBannerSize(size) {
 	var wSize = getWindowSize();
 	var w = wSize.W;
 	var h = wSize.H;
+	var newWidth = size * this.bannerRatio;
 	banner.style.height = size + "px";
-	
+	banner.style.width = newWidth + "px";
 	banner.style.top = ((h - size) / 2) + "px";
-	banner.style.position = "fixed";
+	banner.style.left = ((w - size) / 2) + "px";
+	
+
 	var newSize = size + 20;
 	if (newSize < getMaxBannerSize() && newSize < w && newSize < h) {
 		size += 20;
@@ -68,7 +46,7 @@ function getMaxBannerSize() {
 	var banner = document.getElementById('BannerImage');
 	if (!banner)
 		return;
-	return (banner.offsetWidth);
+	return getWindowSize().H *0.8;
 }
 function Init() {
 	animateNewsBanner();

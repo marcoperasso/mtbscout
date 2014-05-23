@@ -9,9 +9,11 @@
     <div id="ContentPanel" class="ContentPanel">
         <a target="fci" href="http://www.federciclismo.it/" title="Federazione Ciclistica Italiana">
             <img alt="Federazione Ciclistica Italiana" style="float: left; padding: 20px; padding-left: 50px;"
-                src="Logo FCI.jpg" /></a> <a target="asso" href="http://www.assomaestri.org/" title="Assomaestri">
-                    <img style="float: right; padding: 20px; padding-right: 50px;" alt="Assomaestri"
-                        src="assomaestri.png" />
+                src="Logo FCI.jpg" /></a> 
+				
+				<a target="accademia" href="http://www.scuoladimtb.eu/" title="Accademia Nazionale di Mountain Bike">
+                    <img style="float: right; padding: 20px; padding-right: 50px;" alt="Accademia Nazionale di Mountain Bike"
+                        src="accademia.png" />
                 </a>
         <br />
         <h1>
@@ -40,6 +42,9 @@
         <a title="Seguici su Facebook" href="http://www.facebook.com/ScuolaMtbValPentemina"
             target="_blank">
             <img alt="Seguici su Facebook" src="seguici-facebook.jpg" style="width: 200px; height: 50px" /></a>
+		<br />
+		<iframe id="I2" allowfullscreen="" frameborder="0" height="300" name="I2" 
+			src="http://www.youtube.com/embed/dslZNlq-o0w" width="420"></iframe>
         <br />
         <uc1:ImageIterator ID="ImageIterator1" runat="server" HideAds="true" />
         <h3>
@@ -63,7 +68,8 @@
                     target="pontedecimo">U.S. Pontedecimo Ciclismo</a>, affiliata alla F.C.I. - <a href="http://www.federciclismo.it/affiliazione/societa2014/dettagliosoc.asp?mcodice=06T0916"
                         target="_blank">visualizza lista degli attuali tesserati.</a></p>
         <p>
-            Ogni bambino deve essere munito di una fototessera, certificato medico (per attività
+            Ogni bambino deve essere munito di una fototessera, certificato medico 
+			originale (per attività
             sportiva <b>non agonistica</b>), bici propria e <b><i>casco protettivo</i></b>;
             la fototessera ci serve in formato digitale, se ne hai una tradizionale possiamo
             effettuare noi una scansione della stessa (ad esempio quella della carta d&#39;identità
@@ -81,7 +87,7 @@
             come l&#39;equilibrio, la destrezza, l’abilità, la capacità reattiva, l’organizzazione
             spazio-temporale, la forza, la resistenza e la velocità, anche grazie all&#39;ausilio
             dei più svariati ostacoli (bascula, gimkana, piccoli salti, passaggi obbligati,
-            sottopassi, sentieri in salita, ripidoni in discesa, whoops). Non mancheranno peraltro
+            sottopassi, sentieri in salita, ripidoni in discesa, whoops, pump track). Non mancheranno peraltro
             componenti teoriche, più o meno &#39;mascherate&#39; all&#39;interno dell&#39;attività
             ludica, volte da un lato a stimolare l&#39;apprendimento di nozioni specifiche quali
             la conoscenza del mezzo e dei comportamenti da osservare durante le escursioni per
@@ -100,18 +106,14 @@
             senza vincoli, è un modo per rimanere bambini (che ogni tanto si sbucciano un ginocchio
             o si infangano fino ai capelli), è una metafora che ti insegna che se vuoi ottenere
             qualcosa ed esserne soddisfatto, te la devi sudare; sono anche fermamente convinto
-            che se vogliamo migliorare questa nostra società piuttosto disastrata, anestetizzata
+            che se vogliamo migliorare questa nostra società anestetizzata
             da shopping, calcio scommesse e grandi fratelli, si debba lavorare sui bambini.
             Credo fermamente nella bici come strumento di mobilità sostenibile (in particolare
-            in città): ogni giorno percorro circa 25 Km per recarmi al lavoro sulla mia city
-            bike, sono sufficientemente munito di attrezzatura anti intemperie ma ahimé non
-            ho ancora trovato adeguate misure di difesa contro gli automobilisti nevrotici.</p>
+            in città): per questo la uso ogni volta che mi reco in ufficio.</p>
         <p>
             Sulla scia di questa mia passione ho ottenuto il diploma di maestro della <a target="fci"
                 href="http://www.federciclismo.it/studi/maestri_home.asp">Federazione Ciclistica
-                Italiana</a>, mi sono iscritto ad <a target="assom" href="http://www.assomaestri.org">
-                    Assomaestri</a> (organizzazione che tutela, anche dal punto di vista assicurativo,
-            i maestri di Mountain Bike nella loro attività istituzionale) e ho deciso di aprire
+                Italiana</a>, il diploma di Guida di Moutain Bike dell&#39;<a target="accademia" href="http://www.scuoladimtb.eu/">Accademia Nazionale di Mountain Bike</a> e ho deciso di aprire
             questa scuola. Non voglio insegnarti ad essere un campione, ad arrivare primo ad
             ogni costo, a surclassare gli altri: se riuscirò a farti divertire e trasmetterti
             solo un po&#39; del mio entusiasmo, potrò ritenermi soddisfatto.</p>

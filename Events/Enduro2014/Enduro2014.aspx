@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
     CodeFile="Enduro2014.aspx.cs" Inherits="Events_Enduro" %>
 
+<%@ Register src="../../ImageIterator.ascx" tagname="ImageIterator" tagprefix="uc1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>MTB Enduro dei Fieschi</title>
     <style type="text/css">
@@ -37,10 +39,7 @@
         &nbsp;<h3>
             Il percorso</h3>
         <p>
-            20 Km suddivisi in tre salite su asfalto e altrettante discese sterrate. I meno 
-			preparati possono decidere di affrontare anche solo una o due delle tre prove.</p>
-        <p>
-            Ritrovo presso il campo sportivo ore 8.30. Si risale su asfalto passando per località
+            20 Km suddivisi in tre salite su asfalto e altrettante discese sterrate. Si risale su asfalto passando per località
             Castello fino a località Fasciou, sul crinale che separa Valle Scrivia e Val Brevenna,
             luogo di partenza delle tre PS.</p>
         <p>
@@ -56,7 +55,9 @@
             PS3: la ripida. Da località Fasciou si prende il sentiero di direttissima che scende
             lungo il crinale reimmettendosi un chilometro più a valle sulla strada asfaltata.</p>
         
-            E' gradita la <a title="Preiscrizioni" href="/user/subscriptions.aspx">preiscrizione</a>.</p>
+            E' gradita la <a title="Preiscrizioni" href="/user/subscriptions.aspx">preiscrizione</a>.&nbsp;</p>
+        <uc1:ImageIterator ID="ImageIterator1" runat="server" 
+			ImagesPath="FotoValentina" />
         <h1>
             Servizi aggiuntivi</h1>
         <p>
@@ -80,8 +81,6 @@
             <img style="width:100%" src="MTBGoogleEarth.PNG" /></div>
         <div>
             Mappa 3D</div>
-        <h2 class="centered">
-            <a title="Preiscrizioni" href="/user/subscriptions.aspx">Preiscriviti!</a></h2>
         <p class="centered">
             <a title="Visualizza mappa in una pagina più grande" href="map.html" target="_blank">
                 Visualizza mappa in una pagina più grande</a></p>

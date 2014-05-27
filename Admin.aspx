@@ -31,7 +31,12 @@
 		<br />
 		
 		<asp:TextBox ID="TextBoxResult" runat="server" Height="76px" TextMode="MultiLine"
-			Width="666px"></asp:TextBox><br />
+			Width="666px"></asp:TextBox>
+		<br />
+		<asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+			Text="Create image cache" />
+		<asp:TextBox ID="ImageUrl" runat="server" Width="249px">~/Events/Enduro2014/FotoValentina</asp:TextBox>
+		<br />
 		
 	</div>
 </asp:Content>

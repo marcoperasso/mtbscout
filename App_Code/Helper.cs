@@ -126,22 +126,23 @@ public static class Helper
         Interlocked.Decrement(ref sessions);
     }
 
-    public static Bitmap CreateThumbnail(string file, int size, bool save)
+    public static string CreateThumbnail(string file, int size)
     {
         string thumbFile = PathFunctions.GetThumbFile(file);
         if (File.Exists(thumbFile))
         {
-            return new Bitmap(thumbFile);
+			return thumbFile;
         }
         using (System.Drawing.Bitmap bmp = new System.Drawing.Bitmap(file))
         {
-            Bitmap img = CreateThumbnail(bmp, size);
-            if (save)
-                img.Save(thumbFile);
-            return img;
+			using (Bitmap img = CreateThumbnail(bmp, size))
+			{
+				img.Save(thumbFile);
+			}
         }
+		return thumbFile;
     }
-    public static Bitmap CreateThumbnail(Bitmap original, int size)
+    private static Bitmap CreateThumbnail(Bitmap original, int size)
     {
         int w;
         int h;

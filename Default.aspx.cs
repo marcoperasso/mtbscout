@@ -84,9 +84,6 @@ function initRouteTitle() {{document.getElementById(""RouteTitle"").innerHTML = 
 			if (cache.thumbUrls.Length == 0)
 				continue;
 			int imageIdx = r.Next(cache.fileUrls.Length);
-			Size sz = cache.sizes[imageIdx];
-			if (sz.Height > sz.Width) 
-				continue;
 			title = route.Title;
 			pageUrl = route.GetRouteUrl(false);
 			return cache.thumbUrls[imageIdx];

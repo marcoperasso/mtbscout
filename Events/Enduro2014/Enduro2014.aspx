@@ -4,7 +4,7 @@
 <%@ Register src="../../ImageIterator.ascx" tagname="ImageIterator" tagprefix="uc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <title>MTB Enduro dei Fieschi</title>
+	<title>MTB Enduro dei Fieschi</title>
     <style type="text/css">
         p.centered
         {
@@ -19,7 +19,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPanel" runat="Server">
-    <div id="ContentPanel" class="ContentPanel">
+	<div id="ContentPanel" class="ContentPanel">
         <table width="100%">
             <tr>
                 <td>

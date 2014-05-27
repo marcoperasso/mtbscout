@@ -27,10 +27,12 @@ public partial class ImageIterator : System.Web.UI.UserControl
     //--------------------------------------------------------------------------------
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (string.IsNullOrEmpty(ImagesPath))
-            ImagesPath = Page.MapPath("Images");
-
-        cache = Helper.GetImageCache(ImagesPath);
+		string imagesPath;
+		if (string.IsNullOrEmpty(ImagesPath))
+			imagesPath = Page.MapPath("Images");
+		else
+			imagesPath = Page.MapPath(ImagesPath);
+		cache = Helper.GetImageCache(imagesPath);
         if (cache == null)
             return;
 

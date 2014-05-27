@@ -8,6 +8,7 @@ using System.Web.Security;
 using MTBScout.Entities;
 using MTBScout;
 using System.IO;
+using System.Threading;
 
 public partial class Admin : System.Web.UI.Page
 {
@@ -71,5 +72,10 @@ public partial class Admin : System.Web.UI.Page
         }
    
     }
+	protected void Button1_Click(object sender, EventArgs e)
+	{
+		new Thread(new ThreadStart((Action)delegate { ImageCache.Create(Server.MapPath(ImageUrl.Text)); })).Start();
+		
+	}
 }
 

@@ -23,13 +23,12 @@ namespace MTBScout
     [Serializable]
     public class ImageCache
     {
-        public const int maxPerPage = 33;
+        public const int maxPerPage = 33000;
         public string[] files;
         public string[] thumbUrls;
         public string[] reducedUrls;
         public string[] captions;
         public string[] fileUrls;
-        public Size[] sizes;
         public int pages;
 
         public static void ClearCache(string imagesPath)
@@ -104,7 +103,6 @@ namespace MTBScout
             reducedUrls = new string[files.Length];
             captions = new string[files.Length];
             fileUrls = new string[files.Length];
-            sizes = new Size[files.Length];
             pages = (int)Math.Ceiling((float)files.Length / (float)maxPerPage);
             string thumbDir = PathFunctions.GetThumbsFolder(imagesPath);
             if (!Directory.Exists(thumbDir))
@@ -116,10 +114,7 @@ namespace MTBScout
             for (int i = 0; i < files.Length; i++)
             {
                 string file = files[i];
-                Size sz;
-                using (Bitmap bmp = Helper.CreateThumbnail(file, 200/*800*/, true))
-                    sz = bmp.Size;
-                sizes[i] = sz;
+				Helper.CreateThumbnail(file, 200/*800*/);
                 thumbUrls[i] = PathFunctions.GetUrlFromPath(PathFunctions.GetThumbFile(file), true);
 
                 Helper.CreateReduced(file);
@@ -208,7 +203,8 @@ namespace MTBScout
 
         internal void SaveTo(HttpResponse httpResponse)
         {
-            using (Bitmap bmp = Helper.CreateThumbnail(file, 200, false))
+			string thumbFile = Helper.CreateThumbnail(file, 200);
+			using (Bitmap bmp = new Bitmap(thumbFile))
             {
                 httpResponse.ContentType = "image/jpeg";
                 bmp.Save(httpResponse.OutputStream, ImageFormat.Jpeg);

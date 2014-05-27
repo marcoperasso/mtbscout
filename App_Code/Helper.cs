@@ -161,6 +161,15 @@ public static class Helper
             using (System.Drawing.Image img = new System.Drawing.Bitmap(bmp, w, h))
             {
                 bmp.Dispose();
+				using (Graphics g = Graphics.FromImage(img))
+				{
+					using (Image logo = new System.Drawing.Bitmap(HttpContext.Current.Server.MapPath("~/Images/MtbScoutLogoNew.PNG")))
+					{
+						int newWidth = (int)(logo.Width * .4);
+						int newHeight = (int)(logo.Height * .4);
+						g.DrawImage(logo, new Rectangle(w - newWidth - 20, h - newHeight - 20, newWidth, newHeight));
+					}
+				}
                 img.Save(file);
             }
         }

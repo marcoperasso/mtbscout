@@ -81,6 +81,8 @@ public partial class ImageIterator : System.Web.UI.UserControl
 
 		Previous.Visible = false;// start != 0;
 		Next.Visible = false;// end != cache.files.Length;
+		PageCounterUp.Visible = false;
+		PageCounterDown.Visible = false;
         Panel p = new Panel();
         p.CssClass = "album";
         ImagesContainer.Controls.Add(p);

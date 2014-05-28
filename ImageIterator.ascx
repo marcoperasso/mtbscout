@@ -27,7 +27,10 @@
 
     function gallery() {
         $('.ImagesContainer').jGallery({
-            'mode': 'standard'
+            mode: 'standard',
+			transitionDuration: '0.4s',
+			slideshowInterval: '4s',
+			thumbWidth: 130
         });
     }
 </script>

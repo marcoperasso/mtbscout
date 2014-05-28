@@ -20,6 +20,7 @@ public partial class SubscriptionList : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
+		
         if (!Page.IsPostBack)
         {
             BoundField dcf = new BoundField();
@@ -62,4 +63,11 @@ public partial class SubscriptionList : System.Web.UI.Page
         GridViewSubscriptions.DataSource = subscriptors;
         GridViewSubscriptions.DataBind();
     }
+	protected void ButtonSend_Click(object sender, EventArgs e)
+	{
+		subscriptors = DBHelper.GetSubscriptors(TorrigliaId);
+		Helper.SendMail("marco.perasso@tiscali.it", null, null, "Foto Enduro dei Fieschi", "Ciao, ti informiamo che abbiamo pubblicato alcune foto dell'evento in oggetto: <a href='http://www.mtbscout.it/Events/Enduro2014/Enduro2014.aspx'>http://www.mtbscout.it/Events/Enduro2014/Enduro2014.aspx</a>. A breve ne arriveranno altre.<br>Buona visione!", true);
+		foreach (EventSubscriptor es in subscriptors)
+			Helper.SendMail(es.EMail, null, null, "Foto Enduro dei Fieschi", "Ciao, ti informiamo che abbiamo pubblicato alcune foto dell'evento in oggetto: <a href='http://www.mtbscout.it/Events/Enduro2014/Enduro2014.aspx'>http://www.mtbscout.it/Events/Enduro2014/Enduro2014.aspx</a><br>Buona visione!", true);
+	}
 }

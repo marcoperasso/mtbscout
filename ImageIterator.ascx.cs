@@ -47,7 +47,7 @@ public partial class ImageIterator : System.Web.UI.UserControl
         PageCounterUp.DrawPages();
         PageCounterDown.DrawPages();
 
-        ImagesTitle.InnerText = Title;
+        ImagesTitle.InnerHtml = Title;
         ImagesContainer.Style[HtmlTextWriterStyle.MarginLeft] = "auto";
         ImagesContainer.Style[HtmlTextWriterStyle.MarginRight] = "auto";
         ImagesContainer.Width = Unit.Percentage(95);
@@ -79,8 +79,8 @@ public partial class ImageIterator : System.Web.UI.UserControl
         int prog = 0;
         int end = Math.Min(cache.files.Length, start + ImageCache.maxPerPage);
 
-        Previous.Visible = start != 0;
-        Next.Visible = end != cache.files.Length;
+		Previous.Visible = false;// start != 0;
+		Next.Visible = false;// end != cache.files.Length;
         Panel p = new Panel();
         p.CssClass = "album";
         ImagesContainer.Controls.Add(p);

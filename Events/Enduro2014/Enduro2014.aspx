@@ -68,6 +68,12 @@
 		<uc1:ImageIterator ID="ImageIterator2" runat="server" ImagesPath="FotoGuglielmo"
 			
 			Title="Foto di &lt;a href=&quot;http://www.pardo.it&quot; target=&quot;pardo&quot;&gt;Guglielmo&lt;/a&gt;" />
+		<uc1:ImageIterator ID="ImageIterator3" runat="server" ImagesPath="FotoRobertoPartenzaArrivo"
+			Title="Foto di Roberto - Partenza e Arrivo" />
+		<uc1:ImageIterator ID="ImageIterator4" runat="server" ImagesPath="FotoRobertoPS1"
+			Title="Foto di Roberto - PS1" />
+			<uc1:ImageIterator ID="ImageIterator5" runat="server" ImagesPath="FotoRobertoPS2"
+			Title="Foto di Roberto - PS2" />
 		<iframe width="420" height="315" src="//www.youtube.com/embed/E5bi68fauIQ" frameborder="0"
 			allowfullscreen></iframe>
 		<div>

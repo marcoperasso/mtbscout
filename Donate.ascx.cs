@@ -7,8 +7,10 @@ using System.Web.UI.WebControls;
 
 public partial class Donate : System.Web.UI.UserControl
 {
+	public string Message { get; set; }
     protected void Page_Load(object sender, EventArgs e)
     {
-
+		if (!string.IsNullOrEmpty(Message))
+			DonateMessage.InnerText = Message;
     }
 }

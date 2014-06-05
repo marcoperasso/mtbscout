@@ -2,6 +2,7 @@
 	CodeFile="Enduro2014.aspx.cs" Inherits="Events_Enduro" %>
 
 <%@ Register Src="../../ImageIterator.ascx" TagName="ImageIterator" TagPrefix="uc1" %>
+<%@ Register src="../../Donate.ascx" tagname="Donate" tagprefix="uc2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 	<title>MTB Enduro dei Fieschi</title>
 	<style type="text/css">
@@ -63,6 +64,10 @@
 		<p>
 			PS3: la ripida. Da località Fasciou si prende il sentiero di direttissima che scende
 			lungo il crinale reimmettendosi un chilometro più a valle sulla strada asfaltata.</p>
+
+		<uc2:Donate ID="Donate1" runat="server" 
+			Message="Ti è piaciuto l'evento? Ti piacciono le foto? Aiutaci con un piccolo contributo!" />
+
 		<uc1:ImageIterator ID="ImageIterator1" runat="server" ImagesPath="FotoValentina"
 			Title="Foto di Valentina" />
 		<uc1:ImageIterator ID="ImageIterator2" runat="server" ImagesPath="FotoGuglielmo"

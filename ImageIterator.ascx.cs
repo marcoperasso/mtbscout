@@ -31,7 +31,7 @@ public partial class ImageIterator : System.Web.UI.UserControl
 		if (string.IsNullOrEmpty(ImagesPath))
 			imagesPath = Page.MapPath("Images");
 		else
-			imagesPath = Page.MapPath(ImagesPath);
+			imagesPath = Path.IsPathRooted(ImagesPath) ? ImagesPath : Page.MapPath(ImagesPath);
 		cache = Helper.GetImageCache(imagesPath);
         if (cache == null)
             return;

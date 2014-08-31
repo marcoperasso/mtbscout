@@ -79,6 +79,8 @@
 			Title="Foto di Roberto - PS1" />
 			<uc1:ImageIterator ID="ImageIterator5" runat="server" ImagesPath="FotoRobertoPS2"
 			Title="Foto di Roberto - PS2" />
+<uc1:ImageIterator ID="ImageIterator6" runat="server" ImagesPath="FotoLucaPS3"
+			Title="Foto di Luca - PS3" />
 		<iframe width="420" height="315" src="//www.youtube.com/embed/E5bi68fauIQ" frameborder="0"
 			allowfullscreen></iframe>
 		<div>

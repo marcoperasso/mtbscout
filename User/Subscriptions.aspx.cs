@@ -9,9 +9,7 @@ using System.Globalization;
 
 public partial class User_Subscriptions : System.Web.UI.Page
 {
-
-    public const int TorrigliaId = 2;
-
+	
     protected override void OnInit(EventArgs e)
     {
         base.OnInit(e);
@@ -107,16 +105,16 @@ public partial class User_Subscriptions : System.Web.UI.Page
             sbscr.Id = dummy;
         }
         sbscr.BirthDate = dt;
-        sbscr.EventId = TorrigliaId;
+		sbscr.EventId = Helper.CurrentEventId;
         sbscr.UserId = 0;// LoginState.User.Id;
         sbscr.Name = TextBoxName.Text;
         sbscr.Surname = TextBoxSurname.Text;
         sbscr.Club = TextBoxGroup.Text;
         sbscr.GenderNumber = (short)RadioButtonListGender.SelectedIndex;
         DBHelper.SaveSubscriptor(sbscr);
-        Helper.SendMail(sbscr.EMail, null, "info@mtbscout.it", "Conferma iscrizione MTB Enduro dei Fieschi 2014", 
-            "Ciao " + TextBoxName.Text + 
-            ", ti confermiamo l'avvenuta iscrizione, grazie per esserti registrato all'evento <b>MTB Enduro dei Fieschi 2014</b>. Buon divertimento!",
+        Helper.SendMail(sbscr.EMail, null, "info@mtbscout.it", "Conferma iscrizione Tourist Trophy Torriglia 2014", 
+            "Ciao " + TextBoxName.Text +
+			", ti confermiamo l'avvenuta iscrizione, grazie per esserti registrato all'evento <b>Tourist Trophy Torriglia 2014</b>. Buon divertimento!",
             true);
 
         //LoadSubscriptors();

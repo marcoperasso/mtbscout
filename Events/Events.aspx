@@ -33,6 +33,24 @@
             Eventi</h1>
         <div class="Event">
             <table class="Event">
+			<tr>
+                    <td class="DateColumn">
+                        <a href="TouristTrophyTorriglia2014/TouristTrophyTorriglia2014.aspx">Domenica 5 ottobre 2014</a>
+                    </td>
+                    <td class="EventColumn">
+                        Tourist Trophy Torriglia
+                    </td>
+                </tr> 
+             <tr>
+			 <tr>
+                    <td class="DateColumn">
+                        <a target="_blank" href="http://www.genoabike.com/media/manifestazioni/genoacup/main/genoacup00.html">Sabato 6 e Domenica 7 settembre 2014</a>
+                    </td>
+                    <td class="EventColumn">
+                         Ultima Tappa Campionato Italiano Giovanile di Società 
+                    </td>
+                </tr> 
+             <tr>
             <tr>
                     <td class="DateColumn">
                         <a href="Enduro2014/Enduro2014.aspx">Domenica 18 maggio 2014</a>

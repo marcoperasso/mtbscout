@@ -28,6 +28,10 @@ using System.Text.RegularExpressions;
 /// </summary>
 public static class Helper
 {
+	public const int EnduroFieschi2014EventId = 2;
+	public const int Torriglia2014EventId = 3;
+	public const int CurrentEventId = Torriglia2014EventId;
+
     private static int sessions = 0;
     private static Dictionary<string, int> countryCodes = null;
     private const int ImageTitleId = 0x010E;

@@ -22,8 +22,9 @@
 			Tourist Trophy Torriglia</h1>
 		<h2>
 			Domenica 5 ottobre 2014</h2>
-		<h4>
-			AL 1° CLASSIFICATO UNA NOTTE PER DUE NEL B&amp;B <a href="http://www.villatiffany.it" target="bb">VILLA TIFFANY</a> A S.M. DEL 
+		<h4>Pedalata cicloturistica di MTB con premiazione dei primi tre classificati. 
+			</h4>
+		<h4>PRIMO PREMIO UNA NOTTE PER DUE NEL B&amp;B <a href="http://www.villatiffany.it" target="bb">VILLA TIFFANY</a> A S.M. DEL 
 			PORTO TORRIGLIA</h4>
 		&nbsp;<h3>
 			Il percorso</h3>

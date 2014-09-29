@@ -61,10 +61,27 @@ public partial class Admin : System.Web.UI.Page
     protected void ButtonMail_Click(object sender, EventArgs e)
     {
         try
-        {
+		{
+			List<string> mailing = new List<string>();
             foreach (MTBUser u in DBHelper.Users)
-                if (u.SendMail)
-                    Helper.SendMail(u.EMail, null, null, "Newsletter", TextBoxMail.Text, true);
+				if (u.SendMail)
+				{
+					if (!mailing.Contains(u.EMail, StringComparer.InvariantCultureIgnoreCase))
+						mailing.Add(u.EMail);
+				}
+			foreach (EventSubscriptor es in DBHelper.GetSubscriptors())
+				{
+					if (!mailing.Contains(es.EMail, StringComparer.InvariantCultureIgnoreCase))
+						mailing.Add(es.EMail);
+					
+				}
+
+			foreach (string mail in mailing)
+			{
+				Helper.SendMail(mail, null, null, "News", TextBoxMail.Text, true);
+				Log.Add(Log.MsgType.info, string.Concat("Inviata mail di news a ", mail));
+			}
+			
         }
         catch (Exception ex)
         {

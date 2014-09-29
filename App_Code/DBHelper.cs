@@ -366,6 +366,16 @@ public class DBHelper
             return criteria.List<EventSubscriptor>().ToArray();
         }
     }
+
+	//--------------------------------------------------------------------------------
+	public static EventSubscriptor[] GetSubscriptors()
+	{
+		using (ISession iSession = NHSessionManager.GetSession())
+		{
+			var criteria = iSession.CreateCriteria<EventSubscriptor>();
+			return criteria.List<EventSubscriptor>().ToArray();
+		}
+	}
     //--------------------------------------------------------------------------------
     public static void DeleteSubscriptor(EventSubscriptor subscriptor)
     {

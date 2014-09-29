@@ -26,6 +26,7 @@
 			</h4>
 		<h4>PRIMO PREMIO UNA NOTTE PER DUE NEL B&amp;B <a href="http://www.villatiffany.it" target="bb">VILLA TIFFANY</a> A S.M. DEL 
 			PORTO TORRIGLIA</h4>
+		<h4>SECONDO PREMIO CENA/PRANZO PER DUE (ESCLUSO BEVANDE) PRESSO UNA TRATTORIA A TORRIGLIA</h4>
 		&nbsp;<h3>
 			Il percorso</h3>
 		<p>

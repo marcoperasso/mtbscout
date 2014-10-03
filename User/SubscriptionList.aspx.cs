@@ -58,7 +58,7 @@ public partial class SubscriptionList : System.Web.UI.Page
     private void LoadSubscriptors()
     {
 		subscriptors = DBHelper.GetSubscriptors(Helper.CurrentEventId);
-
+		Total.InnerText = string.Format("Totale iscritti: {0}", subscriptors.Length);
         GridViewSubscriptions.DataSource = subscriptors;
         GridViewSubscriptions.DataBind();
     }

@@ -76,8 +76,7 @@
 			decisamente la pena. Troverete di tutto: dal tratto scorrevole a quello tecnico, 
 			dalla discesa ripida e veloce al punto panoramico: un investimento di fatica dal 
 			ritorno garantito!</p>
-		<h3>
-			<a href="../../User/Subscriptions.aspx">Preiscrizioni</a></h3>
+		
 		<h2>
 			&nbsp;Casco obbligatorio - Non occorre essere tesserati</h2>
 			 <iframe src="map.html" style="width: 800px; height: 400px;"></iframe>

@@ -11,7 +11,7 @@
     <property name="Name" column="Name" type="System.String" not-null="true" unique="true"/>
     <property name="Title" column="Title" type="System.String" not-null="true" />
     <property name="Page" column="Page" type="System.String"/>
-    <property name="Image" column="[Image]" type="System.String"/>
+    <property name="Image" column="Image" type="System.String"/>
     <property name="Cycling" column="Cycling" type="System.Int32" />
     <property name="Difficulty" column="Difficulty" type="System.String"/>
     <property name="Description" column="Description" type="System.String"/>

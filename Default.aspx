@@ -11,15 +11,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPanel" runat="Server">
     <div id="ContentPanel" class="ContentPanel">
-         <div id="NewsBanner" class="NewsBanner">
+         <%--<div id="NewsBanner" class="NewsBanner">
             <div style="position: absolute; width: 98%; left: 1%; top: 5px">
                 <img alt="Chiudi" title="Chiudi" onclick="closeBanner();" src="Images/Close.png"
                     style="width: 20px; height: 20px; float: right; cursor:pointer" />
             </div>
-            <a href="MTB ENDURO DEI FIESCHI SAVIGNONE.pdf">
-                <img id="BannerImage" border="0" alt="" src="savignone.png" style="width:90%;height:90%" />
+            <a href="Events/TouristTrophyTorriglia2014/TouristTrophyTorriglia2014.aspx">
+                <img id="BannerImage" border="0" alt="" src="Events/TouristTrophyTorriglia2014/locandina.jpg" style="width:90%;height:90%" />
             </a>
-        </div><%----%>
+        </div>--%>
         <uc1:Spot ID="Spot2" runat="server" />
         <h3>
             Gli Scout</h3>

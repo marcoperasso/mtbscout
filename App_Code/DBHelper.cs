@@ -33,10 +33,17 @@ public class DBHelper
     //--------------------------------------------------------------------------------
     static DBHelper()
     {
-        using (ISession iSession = NHSessionManager.GetSession())
+		try
+		{
+			using (ISession iSession = NHSessionManager.GetSession())
+			{
+				LoadRoutes(iSession);
+				LoadUsers(iSession);
+			}
+		}
+		catch (Exception ex)
         {
-            LoadRoutes(iSession);
-            LoadUsers(iSession);
+            Log.Add(ex.ToString());
         }
     }
 
@@ -579,9 +586,9 @@ public class NHSessionManager
                 cfg.AddXmlFile(file);
             factory = cfg.BuildSessionFactory();
         }
-        catch
+        catch(Exception ex)
         {
-
+			Log.Add(ex.ToString());
         }
     }
 

@@ -58,6 +58,7 @@ public partial class AppointmentsPage : System.Web.UI.Page
             post.Message = message.Text;
             post.Ip = Request["REMOTE_HOST"];
             post.UserId = UserId.Value;
+			post.AppointmentId = p.Id;
             p.AppointmentPosts.Add(post);
 
             DBHelper.SaveAppointment(p);

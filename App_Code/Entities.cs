@@ -271,6 +271,7 @@ namespace MTBScout.Entities
         {
             id = 0;
         }
+		public int AppointmentId{ get; set; }
         public String Name { get; set; }
         public String Message { get; set; }
         public String FormattedMessage { get { return Message.Replace("\n", "<br/>"); } }
@@ -298,6 +299,6 @@ namespace MTBScout.Entities
         public String UserId { get; set; }
         public DateTime PostingDate { get; set; }
         public DateTime AppointmentDate { get; set; }
-        public ISet AppointmentPosts { get; set; }
+        public IList AppointmentPosts { get; set; }
     }
 }

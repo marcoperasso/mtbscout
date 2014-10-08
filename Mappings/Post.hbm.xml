@@ -7,7 +7,8 @@
     <id name="id" unsaved-value="0" access="field" type="System.Int32" >
       <generator class="native" />
     </id>
-    <property name="Message" column="Message" type="System.String"/>
+		<property name="AppointmentId" column="AppointmentId" type="System.Int32"/>
+		<property name="Message" column="Message" type="System.String"/>
     <property name="Name" column="Name" type="System.String"/>
     <property name="Ip" column="Ip" type="System.String"/>
     <property name="UserId" column="UserId" type="System.String"/>

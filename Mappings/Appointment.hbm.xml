@@ -14,9 +14,9 @@
     <property name="PostingDate" column="PostingDate" type="System.DateTime"/>
     <property name="AppointmentDate" column="AppointmentDate" type="System.DateTime"/>
 
-    <set name="AppointmentPosts" table="AppointmentPosts" cascade="all" lazy="false">
+    <bag name="AppointmentPosts" table="Posts" cascade="all" lazy="false">
       <key column="AppointmentId" />
-      <many-to-many column="PostId" unique="true" class="Post" />
-    </set>
+      <one-to-many class="Post" />
+    </bag>
   </class>
 </hibernate-mapping>

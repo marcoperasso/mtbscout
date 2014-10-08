@@ -5,7 +5,7 @@
 <head runat="server">
     <title></title>
     <link href="/css/StyleSheet.css" type="text/css" />
-    <script type="text/javascript" src="/Script/jquery-2.0.3.min.js"></script>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="/Script/jquery.html5uploader.min.js"></script>
     <script type="text/javascript">
         String.prototype.hashCode = function () {

@@ -23,7 +23,8 @@
     </script>
     <script type="text/javascript" src="/Video/swfobject.js"></script>
     <script type="text/javascript" src="/Script/CommonScript.js"></script>
-    <script type="text/javascript" src="/Script/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/Script/tinycolor-0.9.16.min.js"></script>
     <script type="text/javascript" src="/Script/jgallery.min.js"></script>
     <script type="text/javascript" src="http://www.jsbabel.com/js/babel.js" />

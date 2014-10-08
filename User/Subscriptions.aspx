@@ -120,8 +120,7 @@
             </table>
             <asp:Button ID="ButtonSave" runat="server" Text="Invia iscrizione" OnClick="ButtonSave_Click" />
         </fieldset>
-        <script src="/Script/jquery-2.0.3.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    
         <script type="text/javascript">
             mtb$ = jQuery.noConflict();
             mtb$(function () {

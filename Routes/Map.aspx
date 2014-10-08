@@ -6,9 +6,9 @@
     <base target="_top" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title runat="server"></title>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script src="/Script/jquery-2.0.3.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <link href="/css/StyleSheet.css" type="text/css" rel="stylesheet" />
 </head>
 <body style="margin: 0px;">

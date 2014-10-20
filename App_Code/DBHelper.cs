@@ -577,9 +577,7 @@ public class NHSessionManager
         try
         {
             Configuration cfg = new Configuration();
-            string configFile = Helper.IsDevelopment()
-                ? @"hibernate.debug.cfg.xml"
-                : @"hibernate.cfg.xml";
+            string configFile = @"hibernate.cfg.xml";
             string mappingPath = PathFunctions.GetMappingPath();
             cfg.Configure(Path.Combine(mappingPath, configFile));
             foreach (string file in Directory.GetFiles(mappingPath, "*.hbm.xml"))

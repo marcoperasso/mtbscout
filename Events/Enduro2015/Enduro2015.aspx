@@ -69,10 +69,6 @@
 		<div>
 			Video della PS1
 		
-		<div>
-			Video della PS1
-		</div>
-
 		<p class="centered">
 			<a title="Scarica la locandina" href="volantino.pdf" target="_blank">Scarica la locandina</a>
 		</p>

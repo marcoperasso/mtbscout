@@ -26,7 +26,7 @@ function adjustBannerSize(size) {
 	banner.style.height = size + "px";
 	banner.style.width = newWidth + "px";
 	banner.style.top = ((h - size) / 2) + "px";
-	banner.style.left = ((w - size) / 2) + "px";
+	banner.style.left = ((w - newWidth) / 2) + "px";
 	
 
 	var newSize = size + 20;

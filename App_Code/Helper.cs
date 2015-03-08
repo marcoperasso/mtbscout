@@ -30,7 +30,7 @@ public static class Helper
 {
 	public const int EnduroFieschi2014EventId = 2;
 	public const int Torriglia2014EventId = 3;
-	public const int EnduroFieschi2015EventId = 2;
+	public const int EnduroFieschi2015EventId = 4;
 	public const int CurrentEventId = EnduroFieschi2015EventId;
 
     private static int sessions = 0;

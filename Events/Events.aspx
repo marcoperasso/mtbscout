@@ -33,6 +33,15 @@
             Eventi</h1>
         <div class="Event">
             <table class="Event">
+				<tr>
+                    <td class="DateColumn">
+                        <a href="Enduro2015/Enduro2015.aspx">Domenica 17 maggio 2015</a>
+                    </td>
+                    <td class="EventColumn">
+                        Enduro dei Fieschi Montoggio
+                    </td>
+                </tr> 
+             <tr>
 			<tr>
                     <td class="DateColumn">
                         <a href="TouristTrophyTorriglia2014/TouristTrophyTorriglia2014.aspx">Domenica 5 ottobre 2014</a>

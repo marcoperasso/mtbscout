@@ -105,16 +105,18 @@ public partial class User_Subscriptions : System.Web.UI.Page
             sbscr.Id = dummy;
         }
         sbscr.BirthDate = dt;
-		sbscr.EventId = Helper.CurrentEventId;
+		sbscr.EventId = EventInfo.CurrentEventId;
         sbscr.UserId = 0;// LoginState.User.Id;
         sbscr.Name = TextBoxName.Text;
         sbscr.Surname = TextBoxSurname.Text;
         sbscr.Club = TextBoxGroup.Text;
         sbscr.GenderNumber = (short)RadioButtonListGender.SelectedIndex;
         DBHelper.SaveSubscriptor(sbscr);
-        Helper.SendMail(sbscr.EMail, null, "info@mtbscout.it", "Conferma iscrizione Tourist Trophy Torriglia 2014", 
+        Helper.SendMail(sbscr.EMail, null, "info@mtbscout.it", "Conferma iscrizione " + EventInfo.CurrentEventName, 
             "Ciao " + TextBoxName.Text +
-			", ti confermiamo l'avvenuta iscrizione, grazie per esserti registrato all'evento <b>Tourist Trophy Torriglia 2014</b>. Buon divertimento!",
+			", ti confermiamo l'avvenuta iscrizione, grazie per esserti registrato all'evento <b>"+
+			EventInfo.CurrentEventName + 
+			"</b>. Buon divertimento!",
             true);
 
         //LoadSubscriptors();

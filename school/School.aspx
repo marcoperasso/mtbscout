@@ -22,7 +22,7 @@
             Partita IVA 02118870993</h4>
         <h3 style="color: Red; text-align: center; font-weight: bold;
             font-style: oblique;">
-            La scuola riapre il 3 maggio 2014, sono aperte le iscrizioni</h3>
+            La scuola riaprirà a primavera 2015</h3>
            
         <p style="color: Red; text-align: center; font-weight: bold;
             font-style: oblique;">

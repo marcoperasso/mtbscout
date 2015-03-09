@@ -57,14 +57,14 @@ public partial class SubscriptionList : System.Web.UI.Page
 
     private void LoadSubscriptors()
     {
-		subscriptors = DBHelper.GetSubscriptors(Helper.CurrentEventId);
+		subscriptors = DBHelper.GetSubscriptors(EventInfo.CurrentEventId);
 		Total.InnerText = string.Format("Totale iscritti: {0}", subscriptors.Length);
         GridViewSubscriptions.DataSource = subscriptors;
         GridViewSubscriptions.DataBind();
     }
 	protected void ButtonSend_Click(object sender, EventArgs e)
 	{
-		subscriptors = DBHelper.GetSubscriptors(Helper.CurrentEventId);
+		subscriptors = DBHelper.GetSubscriptors(EventInfo.CurrentEventId);
 		Helper.SendMail("marco.perasso@tiscali.it", null, null, "Foto Enduro dei Fieschi", "Ciao, ti informiamo che abbiamo pubblicato alcune foto dell'evento in oggetto: <a href='http://www.mtbscout.it/Events/Enduro2014/Enduro2014.aspx'>http://www.mtbscout.it/Events/Enduro2014/Enduro2014.aspx</a>. A breve ne arriveranno altre.<br>Buona visione!", true);
 		foreach (EventSubscriptor es in subscriptors)
 			Helper.SendMail(es.EMail, null, null, "Foto Enduro dei Fieschi", "Ciao, ti informiamo che abbiamo pubblicato alcune foto dell'evento in oggetto: <a href='http://www.mtbscout.it/Events/Enduro2014/Enduro2014.aspx'>http://www.mtbscout.it/Events/Enduro2014/Enduro2014.aspx</a><br>Buona visione!", true);

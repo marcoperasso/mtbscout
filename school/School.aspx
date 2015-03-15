@@ -18,8 +18,7 @@
         <br />
         <h1>
             Scuola di Mountain Bike Val Pentemina</h1>
-        <h4 style="text-align: center">
-            Partita IVA 02118870993</h4>
+       
         <h3 style="color: Red; text-align: center; font-weight: bold;
             font-style: oblique;">
             La scuola riaprirà a primavera 2015</h3>
@@ -119,8 +118,7 @@
             solo un po&#39; del mio entusiasmo, potrò ritenermi soddisfatto.</p>
         <p>
             Potrai raccogliere altre informazioni su di me navigando questo sito, che ho curato
-            nella forma (sigh, si vede che non sono un grafico...) e nei contenuti. Il mio numero
-            di Partita IVA è 02118870993.</p>
+            nella forma (sigh, si vede che non sono un grafico...) e nei contenuti.</p>
         <h2>
             Dov&#39;è la scuola?</h2>
         <p>

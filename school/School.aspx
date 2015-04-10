@@ -3,13 +3,27 @@
 
 <%@ Register Src="../ImageIterator.ascx" TagName="ImageIterator" TagPrefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <title>Scuola di Mountain Bike</title>
+	<title>Scuola di Mountain Bike</title>
+	<style type="text/css">
+		.auto-style1 {
+			width: 90%;
+			color:black;
+			margin-left:auto;
+			margin-right:auto;
+			border: solid 1px green
+		}
+		.auto-style2 {
+			height: 28px;
+			color: blue;
+			background-color:lightgrey 
+		}
+	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPanel" runat="Server">
-    <div id="ContentPanel" class="ContentPanel">
+	<div id="ContentPanel" class="ContentPanel">
         <a target="fci" href="http://www.federciclismo.it/" title="Federazione Ciclistica Italiana">
-            <img alt="Federazione Ciclistica Italiana" style="float: left; padding: 20px; padding-left: 50px;"
-                src="Logo FCI.jpg" /></a> 
+            <img alt="ACSI" style="float: left; padding: 20px; padding-left: 50px;"
+                src="logo_acsi.png" /></a> 
 				
 				<a target="accademia" href="http://www.scuoladimtb.eu/" title="Accademia Nazionale di Mountain Bike">
                     <img style="float: right; padding: 20px; padding-right: 50px;" alt="Accademia Nazionale di Mountain Bike"
@@ -21,7 +35,7 @@
        
         <h3 style="color: Red; text-align: center; font-weight: bold;
             font-style: oblique;">
-            La scuola riaprirà a primavera 2015</h3>
+            La scuola riaprirà sabato 9 maggio 2015</h3>
            
         <p style="color: Red; text-align: center; font-weight: bold;
             font-style: oblique;">
@@ -52,32 +66,123 @@
             Le lezioni si svolgono ogni <i><b>mercoledì e/o sabato pomeriggio</b></i> e hanno durata di un&#39;ora,
             nella fascia oraria 17.00 - 19.00; i bambini vengono suddivisi su due turni in base
             a esigenze logistiche dei partecipanti, numero di iscritti, età e abilità sviluppate.</p>
-        <p>E' possibile iscriversi mensilmente (mese solare) oppure per l'intera stagione (dal 3/5/2014 al 29/10/2014). Ecco i costi:</p>
+        <p>Ecco i costi:</p>
         <ul>
             <li>mensile una volta a settimana: 30 euro</li>
 			<li>mensile due volte a settimana: 50 euro</li>
-			<li>stagionale una volta a settimana: 150 euro</li>
-			<li>stagionale due volte a settimana: 250 euro</li>
-            <li>prima lezione di prova: gratuita.</li>
+			<li>prima lezione di prova: gratuita.</li>
         </ul>
 		<p>
-            A questo va aggiunto il costo del tesseramento annuo alla Federazione Ciclistica
-            Italiana (comprensivo di assicurazione) in base al <a target="fci" href="http://www.federciclismo.it/affiliazione/tesseramento.asp?cod=5">
-                tariffario in vigore</a>; il tesseramento verrà effettuato presso la <a href="http://www.uspontedecimo.net/"
-                    target="pontedecimo">U.S. Pontedecimo Ciclismo</a>, affiliata alla F.C.I. - <a href="http://www.federciclismo.it/affiliazione/societa2014/dettagliosoc.asp?mcodice=06T0916"
-                        target="_blank">visualizza lista degli attuali tesserati.</a></p>
+            A questo va aggiunto la quota associativa, comprensiva di assicurazione, di 15 euro annui.</p>
         <p>
-            Ogni bambino deve essere munito di una fototessera, certificato medico 
+            Ogni bambino deve essere munito certificato medico 
 			originale (per attività
             sportiva <b>non agonistica</b>), bici propria e <b><i>casco protettivo</i></b>;
-            la fototessera ci serve in formato digitale, se ne hai una tradizionale possiamo
-            effettuare noi una scansione della stessa (ad esempio quella della carta d&#39;identità
-            o di un altro documento recente, così eviti di farla appositamente); non occorre
+            non occorre
             che tu vada a comprare la bici nuova a tuo figlio, fallo venire con quella che ha
             (purché sia in efficiente stato di funzionamento, in particolare i freni), deciderai
             dopo se è il caso di cambiarla in funzione del suo interessamento e della reale
             necessità; per iscrizioni <a href="mailto:info@mtbscout.it">scrivici una mail</a>
             o contatta il 338.3681001.</p>
+        <h2>
+            Calendario lezioni 2015</h2>
+        <table class="auto-style1">
+			<tr>
+				<td colspan="2" class="auto-style2">MAGGIO</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>sabato 9 </td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>sabato 16</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>sabato 23</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>sabato 30</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="auto-style2">GIUGNO</td>
+			</tr>
+			<tr>
+				<td>mercoledì 3</td>
+				<td>sabato 6</td>
+			</tr>
+			<tr>
+				<td>mercoledì 10</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>mercoledì 24</td>
+				<td>sabato 27</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="auto-style2">LUGLIO</td>
+			</tr>
+			<tr>
+				<td>mercoledì 1</td>
+				<td>sabato 4</td>
+			</tr>
+			<tr>
+				<td>mercoledì 8</td>
+				<td>sabato 11</td>
+			</tr>
+			<tr>
+				<td>mercoledì 15</td>
+				<td>sabato 18</td>
+			</tr>
+			<tr>
+				<td>mercoledì 22</td>
+				<td>sabato 25</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="auto-style2">AGOSTO</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>sabato 1</td>
+			</tr>
+			<tr>
+				<td>mercoledì 5</td>
+				<td>sabato 8</td>
+			</tr>
+			<tr>
+				<td>mercoledì 12</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>mercoledì 19</td>
+				<td>sabato 22</td>
+			</tr>
+			<tr>
+				<td>mercoledì 26</td>
+				<td>sabato 29</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="auto-style2">SETTEMBRE</td>
+			</tr>
+			<tr>
+				<td>mercoledì 2</td>
+				<td>sabato 5</td>
+			</tr>
+			<tr>
+				<td>mercoledì 9</td>
+				<td>sabato 12</td>
+			</tr>
+			<tr>
+				<td>mercoledì 16</td>
+				<td>sabato 19</td>
+			</tr>
+			<tr>
+				<td>mercoledì 23</td>
+				<td>sabato 26</td>
+			</tr>
+		</table>
         <h2>
             Contenuti del corso</h2>
         <p>
@@ -111,7 +216,7 @@
             in città): per questo la uso ogni volta che mi reco in ufficio.</p>
         <p>
             Sulla scia di questa mia passione ho ottenuto il diploma di maestro della <a target="fci"
-                href="http://www.federciclismo.it/studi/maestri_home.asp">Federazione Ciclistica
+                href="http://www.federciclismo.it/it/section/tecnici-ds--maestri-mtb/f41f0f8c-f98f-4169-8129-194250bdcfd4/">Federazione Ciclistica
                 Italiana</a>, il diploma di Guida di Moutain Bike dell&#39;<a target="accademia" href="http://www.scuoladimtb.eu/">Accademia Nazionale di Mountain Bike</a> e ho deciso di aprire
             questa scuola. Non voglio insegnarti ad essere un campione, ad arrivare primo ad
             ogni costo, a surclassare gli altri: se riuscirò a farti divertire e trasmetterti
@@ -131,15 +236,11 @@
             di una curva a novanta gradi, seguendo l&#39;indicazione per Gazzolo. La strada
             sale per 1 Km, quindi inizia a scendere: appena iniziata la discesa, troverete il
             campo scuola alla vostra sinistra.</p>
-        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0"
-            marginwidth="0" src="https://maps.google.it/maps/ms?msa=0&amp;msid=216631990246990209455.0004bf85ab8e929a5e351&amp;ie=UTF8&amp;t=m&amp;layer=c&amp;cbll=44.524856,9.064658&amp;panoid=42ytCgs_HBD-noXyPSB9_w&amp;cbp=12,356.97,,0,7.58&amp;ll=44.52508,9.064912&amp;spn=0.001973,0.003095&amp;source=embed&amp;output=svembed">
-        </iframe>
-        <br />
-        <small>Visualizza <a href="https://maps.google.it/maps/ms?msa=0&amp;msid=216631990246990209455.0004bf85ab8e929a5e351&amp;ie=UTF8&amp;t=m&amp;layer=c&amp;cbll=44.524856,9.064658&amp;panoid=42ytCgs_HBD-noXyPSB9_w&amp;cbp=12,356.97,,0,7.58&amp;ll=44.52508,9.064912&amp;spn=0.001973,0.003095&amp;source=embed"
-            style="color: #0000FF; text-align: left">Scuola di Mountain Bike Val Pentemina</a>
-            in una mappa di dimensioni maggiori</small>
-        <h4>
+        <small><a href="https://www.google.it/maps/@44.524816,9.064613,3a,75y,354.08h,70t/data=!3m4!1e1!3m2!1sPghSBH5ZRnz7xDUiGcA3SQ!2e0"
+            style="color: #0000FF; text-align: left">Visualizza dove siamo su Google Maps</a>
+            </small>
+        <%--<h4>
             <a href="Scuola di Mountain Bike Val Pentemina.pdf" target="modulo">Scarica regolamento
-                e modulo di adesione</a>.</h4>
+                e modulo di adesione</a>.</h4>--%>
     </div>
 </asp:Content>

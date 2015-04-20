@@ -68,7 +68,12 @@
 			allowfullscreen></iframe>
 		<div>
 			Video della PS1
-		
+		</div>
+		<iframe width="420" height="315" src="https://www.youtube.com/embed/DMO2t2cGjjs" frameborder="0"
+			allowfullscreen></iframe>
+		<div>
+			Video della PS2
+		</div>
 		<p class="centered">
 			<a title="Scarica la locandina" href="volantino.pdf" target="_blank">Scarica la locandina</a>
 		</p>

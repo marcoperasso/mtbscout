@@ -41,7 +41,7 @@
 			su asfalto passando per località Castello fino a località Fasciou, sul crinale che
 			separa Valle Scrivia e Val Brevenna, luogo di partenza delle PS. </p>
 		<p>
-			PS1: la panoramica veloce. Si spinge un centinaio di metri fino in vetta al monte
+			PS1: la panoramica. Si spinge un centinaio di metri fino in vetta al monte
 			Banca, ci si gode il meritato panorama quindi si intraprende la discesa veloce fino
 			a località Granara. Da qui si ritorna in vetta su asfalto.
 		</p>
@@ -50,11 +50,16 @@
 			lungo il crinale reimmettendosi un chilometro più a valle sulla strada asfaltata.
 		</p>
 		<p>
-			PS3: in via di definizione.
-		</p>
+			PS3: la veloce. Da località Serrato si spinge per qualche minuto fra vecchie case abbandonate fino a
+reimmettersi sul tracciato della PS1, che si percorre per un brevissimo tratto per poi scendere a sinistra nel bosco, fino a 
+reincontrare la PS1 poco prima dell'abitato di Granara.			</p>
+			
 
 		<p>
 			PS4: la lunghissima spaccabraccia. Da località Fasciou si arriva alla cappelletta della Banca, dove inizia l&#39;interminabile single track che riporterà a località Castello.</p>
+		<iframe src="map.html" style="width: 800px; height: 400px;"></iframe>
+		<div>
+			Mappa</div>
 		<p>
 			Partenza ore 8:30 dagli impianti sportivi presso area verde.</p>
 

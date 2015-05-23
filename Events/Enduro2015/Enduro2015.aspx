@@ -58,17 +58,12 @@ reincontrare la PS1 poco prima dell'abitato di Granara.			</p>
 		<p>
 			PS4: la lunghissima spaccabraccia. Da località Fasciou si arriva alla cappelletta della Banca, dove inizia l&#39;interminabile single track che riporterà a località Castello.</p>
 		<iframe src="map.html" style="width: 800px; height: 400px;"></iframe>
-		<div>
+        <div>
 			Mappa</div>
-		<p>
-			Partenza ore 8:30 dagli impianti sportivi presso area verde.</p>
+		<uc1:ImageIterator ID="ImageIterator1" runat="server" ImagesPath="FotoRoberto"
+			Title="Foto di Roberto" />
+		
 
-		<p class="centered" style="color:darkgreen">
-			Quota di partecipazione 10 euro, comprendente ristori lungo il percorso e panino con salsiccia a termine manifestazione.</p>
-
-		<p class="centered">
-			<a title="Iscrizioni online" href="../../User/Subscriptions.aspx" >Iscrizioni online</a>
-		</p>
 		<iframe width="420" height="315" src="//www.youtube.com/embed/E5bi68fauIQ" frameborder="0"
 			allowfullscreen></iframe>
 		<div>

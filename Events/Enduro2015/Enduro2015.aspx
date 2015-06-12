@@ -63,7 +63,8 @@ reincontrare la PS1 poco prima dell'abitato di Granara.			</p>
 		<uc1:ImageIterator ID="ImageIterator1" runat="server" ImagesPath="FotoRoberto"
 			Title="Foto di Roberto" />
 		
-
+        <uc1:ImageIterator ID="ImageIterator2" runat="server" ImagesPath="Foto"
+			Title="Foto di Ilaria" />
 		<iframe width="420" height="315" src="//www.youtube.com/embed/E5bi68fauIQ" frameborder="0"
 			allowfullscreen></iframe>
 		<div>

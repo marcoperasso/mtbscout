@@ -33,6 +33,10 @@ p
     text-align: justify;
     font-size: 18px;
 }
+p.cc_message /*serve per filter banner dei cookie*/
+{
+    color: white;
+}
 li
 {
     text-align: left;

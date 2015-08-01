@@ -6,55 +6,68 @@
 <%@ Register Src="~/Menu.ascx" TagName="Menu" TagPrefix="uc3" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <script type="text/javascript">
-        _gat = null;
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <%--<script type="text/javascript" src="/script/snow.js"/>--%>
-    <script type="text/javascript">
-        if (_gat) {
-            var pageTracker = _gat._getTracker("UA-6229357-1");
-            pageTracker._trackPageview();
-        }
-    </script>
-    <script type="text/javascript">
-        window.onload = function () { InitPage(); }
-    </script>
-    <script type="text/javascript" src="/Video/swfobject.js"></script>
-    <script type="text/javascript" src="/Script/CommonScript.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="/Script/tinycolor-0.9.16.min.js"></script>
-    <script type="text/javascript" src="/Script/jgallery.min.js"></script>
-    <script type="text/javascript" src="http://localhost:610/jsbabel/js/babel.js"></script>
-<script type="text/javascript">
-        try {
-            swfobject.registerObject("player", "9.0.98", "expressInstall.swf");
-        }
-        catch (e) {
-        }
-    </script> 
-	
-    <link rel="stylesheet" type="text/css" media="all" href="/css/StyleSheet.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="/css/jgallery.min.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <meta http-equiv="Keywords" content="mountain bike, MTB, Montoggio, Scout, bicicletta, bici, bike, escursioni, tracks, gps, 
+	<script type="text/javascript">
+		_gat = null;
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<%--<script type="text/javascript" src="/script/snow.js"/>--%>
+	<script type="text/javascript">
+		if (_gat) {
+			var pageTracker = _gat._getTracker("UA-6229357-1");
+			pageTracker._trackPageview();
+		}
+	</script>
+	<script type="text/javascript">
+		window.onload = function () { InitPage(); }
+	</script>
+	<script type="text/javascript" src="/Video/swfobject.js"></script>
+	<script type="text/javascript" src="/Script/CommonScript.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/Script/tinycolor-0.9.16.min.js"></script>
+	<script type="text/javascript" src="/Script/jgallery.min.js"></script>
+	<script type="text/javascript" src="http://localhost:610/jsbabel/js/babel.js"></script>
+	<script type="text/javascript">
+		try {
+			swfobject.registerObject("player", "9.0.98", "expressInstall.swf");
+		}
+		catch (e) {
+		}
+	</script>
+
+	<link rel="stylesheet" type="text/css" media="all" href="/css/StyleSheet.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="/css/jgallery.min.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<meta http-equiv="Keywords" content="mountain bike, MTB, Montoggio, Scout, bicicletta, bici, bike, escursioni, tracks, gps, 
     ride, cross coutry, free ride, all mountain, montagna, sentieri, mountain, excursions" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+	<script type="text/javascript">
+		window.cookieconsent_options = {
+			"message": "Utilizziamo i cookie per personalizzare i contenuti e gli annunci, fornire le funzioni dei social media e analizzare il nostro traffico. Inoltre forniamo informazioni sul modo in cui utilizzi il nostro sito alle agenzie pubblicitarie, agli istituti che eseguono analisi dei dati web e ai social media nostri partner",
+			"dismiss": "Va bene!",
+			"learnMore": "More info",
+			"link": null, "theme":
+				"dark-top"
+		};
+	</script>
+
+	<script type="text/javascript" src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
+	<!-- End Cookie Consent plugin -->
 </head>
 <body>
-    <form id="form1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server">
-    </asp:ScriptManager>
-    <uc1:Header ID="Header1" runat="server" />
-    <uc3:Menu ID="Menu1" runat="server" />
-    <asp:ContentPlaceHolder ID="ContentPanel" runat="server">
-    </asp:ContentPlaceHolder>
-    <uc2:Footer ID="Footer1" runat="server" />
-    </form>
-   
+	<form id="form1" runat="server">
+		<asp:ScriptManager ID="ScriptManager1" runat="server">
+		</asp:ScriptManager>
+		<uc1:Header ID="Header1" runat="server" />
+		<uc3:Menu ID="Menu1" runat="server" />
+		<asp:ContentPlaceHolder ID="ContentPanel" runat="server">
+		</asp:ContentPlaceHolder>
+		<uc2:Footer ID="Footer1" runat="server" />
+	</form>
+
 </body>
 </html>

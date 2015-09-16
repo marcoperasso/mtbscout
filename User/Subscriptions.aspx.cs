@@ -84,15 +84,20 @@ public partial class User_Subscriptions : System.Web.UI.Page
   
     protected void ButtonSave_Click(object sender, EventArgs e)
     {
-        if (!captcha.IsValid(Check.Text))
+        if (!Privacy.Checked)
+		{
+			Page.ClientScript.RegisterStartupScript(GetType(), "InvalidPrivacy", "alert(\"Si prega di accettare l'informativa sulla privacy.\");", true);
+			
+			return;
+		}
+       if (!captcha.IsValid(Check.Text))
         {
             Page.ClientScript.RegisterStartupScript(GetType(), "InvalidCaptcha", "alert('Il codice di verifica che hai inserito non è valido.');", true);
             Check.Text = "";
             captcha.SetCaptcha();
             return;
         }
-
-        DateTime dt;
+		 DateTime dt;
         if (!ParseDate(TextBoxBirthDate.Text, out dt))
             return;
         EventSubscriptor sbscr = DBHelper.LoadSubscriptor(TextBoxMail.Text);
@@ -129,6 +134,10 @@ public partial class User_Subscriptions : System.Web.UI.Page
         RefreshCurrentSubscriptor();
     }
 
+	protected void CheckBoxRequired_ServerValidate(object sender, ServerValidateEventArgs e)
+	{
+		e.IsValid = Privacy.Checked;
+	}
     private void RefreshCurrentSubscriptor()
     {
         SubscriptionId.Value = "";
@@ -139,6 +148,7 @@ public partial class User_Subscriptions : System.Web.UI.Page
         TextBoxGroup.Text = "";
         TextBoxMail.Text = "";
         Check.Text = "";
+		Privacy.Checked = false;
         RadioButtonListGender.SelectedIndex = 0;
         captcha.SetCaptcha();
     }

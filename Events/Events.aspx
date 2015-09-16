@@ -35,6 +35,15 @@
             <table class="Event">
 				<tr>
                     <td class="DateColumn">
+                        <a href="TouristTrophyTorriglia2015/TouristTrophyTorriglia2015.aspx">Domenica 4 ottobre 2015</a>
+                    </td>
+                    <td class="EventColumn">
+                        Cicloturistica 3T
+                    </td>
+                </tr> 
+             <tr>
+				<tr>
+                    <td class="DateColumn">
                         <a href="Enduro2015/Enduro2015.aspx">Domenica 17 maggio 2015</a>
                     </td>
                     <td class="EventColumn">

@@ -94,6 +94,14 @@
 						<td></td>
 					</tr>
 					<tr>
+						<td colspan="3">
+							<asp:CheckBox runat="server" ID="Privacy" />
+							Ho letto, compreso e accettato l&#39;<a href="privacy.html" target="privacy" title="Informativa sulla privacy">informativa sul trattamento dei miei dati personali</a>
+
+						</td>
+
+					</tr>
+					<tr>
 						<td>Scrivi questo codice di verifica:
 							<Controls:Captcha ID="captcha" runat="server" />
 

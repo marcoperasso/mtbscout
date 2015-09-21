@@ -108,6 +108,7 @@
 		</h3>
 		<h3>
 			<a href="../../User/Subscriptions.aspx" title="Preiscrizioni">Preiscrizioni</a></h3>
+			<img class="centered" src="locandina.jpg"/>
 		<h2>
 			&nbsp;Casco obbligatorio - Non occorre essere tesserati</h2>
 		&nbsp; <a target="trala" title="Tra l'antola e il mare"

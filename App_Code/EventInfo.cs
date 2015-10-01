@@ -14,5 +14,5 @@ public class EventInfo
 	public const int Torriglia2015EventId = 5;
 	public const int CurrentEventId = Torriglia2015EventId;
 	public const string CurrentEventName = "Cicloturistica 3T 2015";
-	public const string CurrentEventDate = "Domenica 4 ottobre 2015";
+	public const string CurrentEventDate = "Domenica 11 ottobre 2015";
 }

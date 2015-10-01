@@ -101,17 +101,22 @@
 	<div id="ContentPanel" class="ContentPanel">
 		<h1>
 			Cicloturistica 3T</h1>
-		<h2>
-			Domenica 4 ottobre 2015</h2>
+		<h1 style="color:red;">
+			Rinviato a Domenica 11 ottobre 2015</h1>
 		<h3>
 			Pedalata cicloturistica di MTB con premiazione dei primi tre classificati.
 		</h3>
 		<h3>
 			<a href="../../User/Subscriptions.aspx" title="Preiscrizioni">Preiscrizioni</a></h3>
-			<img class="centered" src="locandina.jpg"/>
+			
+		<img class="centered" src="locandina.jpg"/>
+		<dov>
+		<img class="centered" style ="margin-top:20px" src="mappa.jpg"/>
+		<p class="centered">Mappa percorso</p>
+		</div>
 		<h2>
-			&nbsp;Casco obbligatorio - Non occorre essere tesserati</h2>
-		&nbsp; <a target="trala" title="Tra l'antola e il mare"
+		Casco obbligatorio - Non occorre essere tesserati</h2>
+		 <a target="trala" title="Tra l'antola e il mare"
 				href="http://www.tralantolaeilmare.org/">
 				<img class="logo" alt="Tra l'antola e il mare" src="http://www.tralantolaeilmare.org/wp-content/uploads/2013/05/cropped-narcisi111.jpg" /></a>
 	</div>

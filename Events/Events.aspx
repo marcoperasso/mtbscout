@@ -35,7 +35,7 @@
             <table class="Event">
 				<tr>
                     <td class="DateColumn">
-                        <a href="TouristTrophyTorriglia2015/TouristTrophyTorriglia2015.aspx">Domenica 4 ottobre 2015</a>
+                        <a href="TouristTrophyTorriglia2015/TouristTrophyTorriglia2015.aspx">Domenica 11 ottobre 2015</a>
                     </td>
                     <td class="EventColumn">
                         Cicloturistica 3T

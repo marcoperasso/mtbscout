@@ -17,13 +17,16 @@
 			color: blue;
 			background-color:lightgrey 
 		}
+	    .auto-style3 {
+            height: 26px;
+        }
 	</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPanel" runat="Server">
 	<div id="ContentPanel" class="ContentPanel">
         <a target="fci" href="http://www.federciclismo.it/" title="Federazione Ciclistica Italiana">
-            <img alt="ACSI" style="float: left; padding: 20px; padding-left: 50px;"
-                src="logo_acsi.png" /></a> 
+            <img alt="FCI" style="float: left; padding: 20px; padding-left: 50px;"
+                src="Logo FCI.jpg" /></a> 
 				
 				<a target="accademia" href="http://www.scuoladimtb.eu/" title="Accademia Nazionale di Mountain Bike">
                     <img style="float: right; padding: 20px; padding-right: 50px;" alt="Accademia Nazionale di Mountain Bike"
@@ -35,11 +38,12 @@
        
         <h3 style="color: Red; text-align: center; font-weight: bold;
             font-style: oblique;">
-            La scuola riaprirà sabato 9 maggio 2015</h3>
+            La scuola riaprirà a maggio 2017</h3>
            
         <p style="color: Red; text-align: center; font-weight: bold;
             font-style: oblique;">
-           Vuoi iscriverti o chiedere qualcosa?  <a href="mailto:info@mtbscout.it">Scrivici una mail</a> o contatta Marco al 338.3681001</p>
+            Vuoi iscriverti o chiedere qualcosa?  <a href="mailto:info@mtbscout.it">Scrivici una mail</a> o contatta Marco al 338.3681001</p>
+          
         <br />
         <p>
             La scuola è rivolta principalmente ai bambini e ragazzi dai 7 ai 12 anni ed ha l&#39;obiettivo
@@ -73,56 +77,45 @@
 			<li>prima lezione di prova: gratuita.</li>
         </ul>
 		<p>
-            A questo va aggiunto la quota associativa, comprensiva di assicurazione, di 15 euro annui.</p>
+            A questo va aggiunto la quota associativa di 15 euro annui ed il costo di tesseramento in base alle 
+            <a target="fci" title="Categorie e costi del tesseramento" 
+                href="http://www.federciclismo.it/it/infopage/categorie-e-costi-del-tesseramento/eb5a6d35-8057-4eef-bef6-496ae9b18ea3/"
+                >
+                tabelle della federazione.
+            </a>
+		</p>
         <p>
-            Ogni bambino deve essere munito certificato medico 
-			originale (per attività
-            sportiva <b>non agonistica</b>), bici propria e <b><i>casco protettivo</i></b>;
+            Ogni bambino deve essere munito di certificato medico originale, bici propria e <b><i>casco protettivo</i></b>;
             non occorre
             che tu vada a comprare la bici nuova a tuo figlio, fallo venire con quella che ha
             (purché sia in efficiente stato di funzionamento, in particolare i freni), deciderai
             dopo se è il caso di cambiarla in funzione del suo interessamento e della reale
             necessità; per iscrizioni <a href="mailto:info@mtbscout.it">scrivici una mail</a>
             o contatta il 338.3681001.</p>
-        <h2>
-            Calendario lezioni 2015</h2>
+       <%-- <h2>
+            Calendario lezioni 2016</h2>
         <table class="auto-style1">
 			<tr>
 				<td colspan="2" class="auto-style2">MAGGIO</td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
-				<td>sabato 9 </td>
+				<td>sabato 7</td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
-				<td>sabato 16</td>
+				<td>sabato 14</td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
-				<td>sabato 23</td>
+				<td>sabato 21</td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
-				<td>sabato 30</td>
+				<td>sabato 28</td>
 			</tr>
 			<tr>
 				<td colspan="2" class="auto-style2">GIUGNO</td>
-			</tr>
-			<tr>
-				<td>mercoledì 3</td>
-				<td>sabato 6</td>
-			</tr>
-			<tr>
-				<td>mercoledì 10</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>mercoledì 24</td>
-				<td>sabato 27</td>
-			</tr>
-			<tr>
-				<td colspan="2" class="auto-style2">LUGLIO</td>
 			</tr>
 			<tr>
 				<td>mercoledì 1</td>
@@ -134,55 +127,74 @@
 			</tr>
 			<tr>
 				<td>mercoledì 15</td>
-				<td>sabato 18</td>
+				<td>&nbsp;</td>
 			</tr>
-			<tr>
+            <tr>
 				<td>mercoledì 22</td>
 				<td>sabato 25</td>
+			</tr> 
+			<tr>
+				<td colspan="2" class="auto-style2">LUGLIO</td>
+			</tr>
+			<tr>
+				<td>mercoledì 6</td>
+				<td>sabato 2</td>
+			</tr>
+			<tr>
+				<td>mercoledì 13</td>
+				<td>sabato 9</td>
+			</tr>
+			<tr>
+				<td>mercoledì 20</td>
+				<td>sabato 23</td>
+			</tr>
+			<tr>
+				<td>mercoledì 27</td>
+				<td>sabato 30</td>
 			</tr>
 			<tr>
 				<td colspan="2" class="auto-style2">AGOSTO</td>
 			</tr>
 			<tr>
-				<td>&nbsp;</td>
-				<td>sabato 1</td>
+				<td>mercoledì 3</td>
+				<td>sabato 6</td>
 			</tr>
 			<tr>
-				<td>mercoledì 5</td>
-				<td>sabato 8</td>
+				<td>mercoledì 10</td>
+				<td>sabato 13</td>
 			</tr>
 			<tr>
-				<td>mercoledì 12</td>
-				<td>&nbsp;</td>
+				<td>mercoledì 17</td>
+				<td>sabato 20</td>
 			</tr>
 			<tr>
-				<td>mercoledì 19</td>
-				<td>sabato 22</td>
-			</tr>
-			<tr>
-				<td>mercoledì 26</td>
-				<td>sabato 29</td>
+				<td>mercoledì 24</td>
+				<td>sabato 27</td>
 			</tr>
 			<tr>
 				<td colspan="2" class="auto-style2">SETTEMBRE</td>
 			</tr>
 			<tr>
-				<td>mercoledì 2</td>
-				<td>sabato 5</td>
+				<td class="auto-style3">&nbsp;</td>
+				<td class="auto-style3">sabato 3</td>
 			</tr>
 			<tr>
-				<td>mercoledì 9</td>
-				<td>sabato 12</td>
+				<td>mercoledì 7</td>
+				<td>sabato 10</td>
 			</tr>
 			<tr>
-				<td>mercoledì 16</td>
-				<td>sabato 19</td>
+				<td>mercoledì 14</td>
+				<td>sabato 17</td>
 			</tr>
 			<tr>
-				<td>mercoledì 23</td>
-				<td>sabato 26</td>
+				<td>mercoledì 21</td>
+				<td>sabato 24</td>
 			</tr>
-		</table>
+			<tr>
+				<td>mercoledì 28</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>--%>
         <h2>
             Contenuti del corso</h2>
         <p>
@@ -236,7 +248,7 @@
             di una curva a novanta gradi, seguendo l&#39;indicazione per Gazzolo. La strada
             sale per 1 Km, quindi inizia a scendere: appena iniziata la discesa, troverete il
             campo scuola alla vostra sinistra.</p>
-        <small><a href="https://www.google.it/maps/@44.524816,9.064613,3a,75y,354.08h,70t/data=!3m4!1e1!3m2!1sPghSBH5ZRnz7xDUiGcA3SQ!2e0"
+        <small><a href="https://www.google.it/maps/@44.5248738,9.0646785,3a,75y,350.83h,83.61t/data=!3m6!1e1!3m4!1szQas8pSASQJ3uvjFrbYtAA!2e0!7i13312!8i6656"
             style="color: #0000FF; text-align: left">Visualizza dove siamo su Google Maps</a>
             </small>
         <%--<h4>

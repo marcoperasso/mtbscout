@@ -1,38 +1,53 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Events.aspx.cs" MasterPageFile="~/MasterPage.master"
-    Inherits="Events" %>
+<%@ page language="C#" autoeventwireup="true" codefile="Events.aspx.cs" masterpagefile="~/MasterPage.master"
+	inherits="Events" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <title>Eventi</title>
-    <style type="text/css">
-        .Event
-        {
-            font-size: large;
-            padding-top: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        .Event td
-        {
-            padding: 10px;
-            text-align: justify;
-            vertical-align: text-top;
-        }
-        .DateColumn
-        {
-            width: 283px;
-        }
-        .EventColumn
-        {
-            width: 600px;
-        }
-    </style>
+	<title>Eventi</title>
+	<style type="text/css">
+		.Event {
+			font-size: large;
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+			.Event td {
+				padding: 10px;
+				text-align: justify;
+				vertical-align: text-top;
+			}
+
+		.DateColumn {
+			width: 283px;
+		}
+
+		.EventColumn {
+			width: 600px;
+		}
+	</style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPanel" runat="Server">
+<asp:content id="Content2" contentplaceholderid="ContentPanel" runat="Server">
     <div id="ContentPanel" class="ContentPanel">
         <h1>
             Eventi</h1>
         <div class="Event">
             <table class="Event">
+                <tr>
+                    <td class="DateColumn">
+                        <a href="Pentema2017/Pentema2017.aspx">Domenica 8 gennaio 2017</a>
+                    </td>
+                    <td class="EventColumn">
+                        Pedalata Benefica al Presepe di Pentema
+                    </td>
+                </tr> 
+				<tr>
+                    <td class="DateColumn">
+                        <a href="Enduro2016/Enduro2016.aspx">Domenica 22 maggio 2016</a>
+                    </td>
+                    <td class="EventColumn">
+                        Enduro dei Fieschi Montoggio
+                    </td>
+                </tr> 
 				<tr>
                     <td class="DateColumn">
                         <a href="TouristTrophyTorriglia2015/TouristTrophyTorriglia2015.aspx">Domenica 11 ottobre 2015</a>
@@ -41,7 +56,6 @@
                         Cicloturistica 3T
                     </td>
                 </tr> 
-             <tr>
 				<tr>
                     <td class="DateColumn">
                         <a href="Enduro2015/Enduro2015.aspx">Domenica 17 maggio 2015</a>
@@ -50,7 +64,6 @@
                         Enduro dei Fieschi Montoggio
                     </td>
                 </tr> 
-             <tr>
 			<tr>
                     <td class="DateColumn">
                         <a href="TouristTrophyTorriglia2014/TouristTrophyTorriglia2014.aspx">Domenica 5 ottobre 2014</a>
@@ -59,7 +72,6 @@
                         Tourist Trophy Torriglia
                     </td>
                 </tr> 
-             <tr>
 			 <tr>
                     <td class="DateColumn">
                         <a target="_blank" href="http://www.genoabike.com/media/manifestazioni/genoacup/main/genoacup00.html">Sabato 6 e Domenica 7 settembre 2014</a>
@@ -68,7 +80,6 @@
                          Ultima Tappa Campionato Italiano Giovanile di Società 
                     </td>
                 </tr> 
-             <tr>
             <tr>
                     <td class="DateColumn">
                         <a href="Enduro2014/Enduro2014.aspx">Domenica 18 maggio 2014</a>
@@ -77,7 +88,6 @@
                         MTB Enduro dei Fieschi
                     </td>
                 </tr> 
-             <tr>
             <tr>
                     <td class="DateColumn">
                         <a href="TouristTrophyTorriglia/TouristTrophyTorriglia.aspx">Domenica 16 giugno 2013</a>
@@ -165,4 +175,4 @@
             </table>
         </div>
     </div>
-</asp:Content>
+</asp:content>
